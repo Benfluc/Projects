@@ -14,7 +14,7 @@ This project applies time series forecasting techniques to predict monthly Arabi
 - [Portuguese Version](README_PT.md) – overview and explanation in Portuguese  
 
 ## Source Code
-- All scripts and notebooks are available in the [code folder](https://github.com/Benfluc/Projects/project1/codes)  
+- All scripts and notebooks are available in the [code folder](https://github.com/Benfluc/Projects/tree/main/project1/codes)  
 
 ## Images and Visualizations
 - Charts, graphs, and other project images can be found in the [images folder](https://github.com/Benfluc/projects/tree/main/projeto1/imgs)
