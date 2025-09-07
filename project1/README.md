@@ -14,7 +14,7 @@ This project applies time series forecasting techniques to predict monthly Arabi
 - [Portuguese Version](README_PT.md) – overview and explanation in Portuguese
 
 ## Full Article
-- [English Version](#)
+- [English Version](https://github.com/Benfluc/Projects/blob/main/project1/Article%20EN.pdf)
 - [Portuguese Version](https://github.com/Benfluc/Projects/blob/main/project1/Artigo_PT.pdf)
 
 ## Source Code
