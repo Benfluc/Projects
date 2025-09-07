@@ -17,4 +17,4 @@ Este projeto aplica técnicas de previsão de séries temporais para estimar os 
 - Todos os scripts e notebooks estão disponíveis na pasta [code](https://github.com/Benfluc/Projects/tree/main/project1/codes)  
 
 ## Imagens e Visualizações
-- Gráficos, figuras e imagens do projeto podem ser encontrados na pasta [images](https://github.com/Benfluc
+- Gráficos, figuras e imagens do projeto podem ser encontrados na pasta [images](https://github.com/Benfluc/Projects/tree/main/project1/imgs)
