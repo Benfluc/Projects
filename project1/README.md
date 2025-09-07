@@ -17,4 +17,4 @@ This project applies time series forecasting techniques to predict monthly Arabi
 - All scripts and notebooks are available in the [code folder](https://github.com/Benfluc/Projects/tree/main/project1/codes)  
 
 ## Images and Visualizations
-- Charts, graphs, and other project images can be found in the [images folder](https://github.com/Benfluc/projects/tree/main/projeto1/imgs)
+- Charts, graphs, and other project images can be found in the [images folder](https://github.com/Benfluc/Projects/tree/main/project1/imgs)
