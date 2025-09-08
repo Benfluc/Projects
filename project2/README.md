@@ -16,7 +16,7 @@ This project focuses on logistics cost minimization through the classical transp
 - [Portuguese Version](README_PT.md) – overview and explanation in Portuguese
 
 ## Full Article
-- [English Version](#)
+- [English Version](https://github.com/Benfluc/Projects/blob/main/project2/text_en.md)
 - [Portuguese Version](https://github.com/Benfluc/Projects/blob/main/project2/text_pt.md)
 
 ## Source Code
