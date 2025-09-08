@@ -9,7 +9,9 @@ This project focuses on logistics cost minimization through the classical transp
       operations research and computational optimization.
 
 ## Achievements / Results
- 
+The project successfully applied the Northwest Corner Method to establish an initial feasible transportation plan and later optimized it through the MODI method. 
+As a result, it achieved a minimum transportation cost of R$ 1200 with an optimized allocation matrix. 
+This process highlights the practical application of operations research techniques, linear programming, and computational optimization using Python and NumPy.
 
 ## Project Documentation
 - [English Version](README.md) – this document  
