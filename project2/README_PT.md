@@ -17,4 +17,4 @@ Esse processo evidencia a aplicação prática de técnicas de pesquisa operacio
 - [Versão em Português](https://github.com/Benfluc/Projects/blob/main/project2/text_pt.md)  
 
 ## Código-Fonte
-- Todos os scripts e notebooks estão disponíveis na [pasta de códigos](https://github.com/Benfluc/Projects/tree/main/project1/codes)  
+- O código desse projeto está disponível na [pasta de códigos](https://github.com/Benfluc/Projects/tree/main/project2/codes)  
