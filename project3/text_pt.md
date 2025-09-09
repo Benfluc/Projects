@@ -247,5 +247,85 @@ plot_topn(top_cbos, "Top 10 - CBO com Mais Acidentes", "Número de acidentes", "
 top_cnaes = topn_counts(df, col_cnae, 10)
 plot_topn(top_cnaes, "Top 10 - CNAE com Mais Acidentes", "Número de acidentes", "figs/top10/top10_cnaes.png")
 ```
+**Saída:**
 
+![Top Causadores de Acidentes](https://github.com/Benfluc/Projects/blob/main/project3/imgs/top10_agentes.png)
 
+![Municípios com mais Acidentes](https://github.com/Benfluc/Projects/blob/main/project3/imgs/top10_municipios.png)
+
+![Agentes Acidentes Fatais](https://github.com/Benfluc/Projects/blob/main/project3/imgs/top10_agentes_fatais.png)
+
+![CBO com mais Acidentes](https://github.com/Benfluc/Projects/blob/main/project3/imgs/top10_cbos.png)
+
+![CNAE com mais Acidentes](https://github.com/Benfluc/Projects/blob/main/project3/imgs/top10_cnaes.png)
+
+Agora vamos analisar os acidentes comparativamente por mês.
+
+```python
+if "data_acidente_parsed" in df.columns and not df["data_acidente_parsed"].isna().all():
+    ts = df.set_index("data_acidente_parsed").resample("M").size()
+    plt.figure(figsize=(12,5))
+    ts.plot()
+    plt.title("Série temporal: acidentes por mês")
+    plt.ylabel("Número de acidentes")
+    plt.xlabel("Mês")
+    plt.tight_layout()
+    plt.savefig("figs/acidentes_por_mes.png", bbox_inches="tight")
+    plt.show()
+    plt.close()
+
+    # comparação ano a ano (se houver múltiplos anos)
+    df["ano"] = df["data_acidente_parsed"].dt.year
+    if df["ano"].nunique() > 1:
+        pivot = df.groupby([df["data_acidente_parsed"].dt.to_period("M"), "ano"]).size().unstack(fill_value=0)
+        pivot.index = pivot.index.to_timestamp()
+        pivot.plot(figsize=(12,5))
+        plt.title("Comparação mensal por ano")
+        plt.ylabel("Nº acidentes")
+        plt.xlabel("Mês")
+        plt.tight_layout()
+        plt.savefig("figs/comparacao_mensal_por_ano.png", bbox_inches="tight")
+        plt.show()
+        plt.close()
+```
+**Saída:**
+![Acidentes por Mês](https://github.com/Benfluc/Projects/blob/main/project3/imgs/acidentes_por_mes.png)
+
+Plotando a distribuição por idade e por sexo
+```python
+# --------------------
+# 11) Distribuição de idade e sexo
+# --------------------
+ensure_dir("figs/demografia")
+if col_sexo:
+    plt.figure(figsize=(6,4))
+    sns.countplot(data=df, x=col_sexo, order=df[col_sexo].value_counts().index)
+    plt.title("Distribuição por sexo")
+    plt.xlabel("Sexo")
+    plt.tight_layout()
+    plt.savefig("figs/demografia/sexo_dist.png", bbox_inches="tight")
+    plt.show()
+    plt.close()
+
+if "idade_anos" in df.columns:
+    plt.figure(figsize=(8,4))
+    sns.histplot(df["idade_anos"].dropna(), kde=False, bins=25)
+    plt.title("Distribuição de Idade (anos)")
+    plt.xlabel("Idade (anos)")
+    plt.tight_layout()
+    plt.savefig("figs/demografia/idade_hist.png", bbox_inches="tight")
+    plt.show()
+    plt.close()
+
+# Boxplot idade por óbito_flag
+if "idade_anos" in df.columns:
+    plt.figure(figsize=(8,4))
+    sns.boxplot(x="obito_flag", y="idade_anos", data=df)
+    plt.title("Idade vs óbito (boxplot)")
+    plt.xlabel("Óbito")
+    plt.ylabel("Idade (anos)")
+    plt.tight_layout()
+    plt.savefig("figs/demografia/idade_vs_obito_box.png", bbox_inches="tight")
+    plt.show()
+    plt.close()
+```
