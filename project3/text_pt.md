@@ -1,18 +1,32 @@
-# Análise Exploratória de Dados: Um estudo sobre os acidentes de trabalho no Brasil
+# Análise Exploratória de Acidentes de Trabalho no Brasil (2023–2024): Padrões, Tendências e Fatores de Risco
 
-Este projeto realiza uma análise exploratória de dados (EDA) sobre acidentes de trabalho no Brasil, utilizando bases de dados oficiais para identificar padrões, tendências e fatores de risco associados a incidentes ocupacionais.
-O estudo aplica análise estatística, visualização de dados e técnicas descritivas para compreender a distribuição dos acidentes entre setores, regiões e períodos de tempo.
-Ele demonstra habilidades práticas em análise de dados, programação em Python e uso de bibliotecas como Pandas, Matplotlib e Seaborn.
+Este estudo realiza uma análise exploratória de dados (EDA) sobre acidentes de trabalho no Brasil nos anos de 2023 e 2024, utilizando dados oficiais do governo. 
+Foram aplicadas técnicas estatísticas e de visualização para identificar os principais agentes causadores, ocupações mais afetadas, municípios de maior ocorrência e perfil demográfico das vítimas.
 
-## **Sobre os dados**
+SUMÁRIO:
+- Introdução
+- Limpeza e tratamento dos dados
+- Estatísticas descritivas gerais
+- Principais recorrências
+- Perfil demográfico dos trabalhadores
+- Conclusões gerais e insights
 
+
+## **1. INTRODUÇÃO**
+
+Os acidentes de trabalho constituem um problema relevante no Brasil, afetando a saúde dos trabalhadores e gerando impactos econômicos e sociais significativos. A análise de dados oficiais sobre esses eventos permite identificar padrões, setores mais vulneráveis e fatores de risco, fornecendo subsídios importantes para a prevenção.
 Os dados foram obtidos através do Portal de Dados Abertos do governo do Brasil e estão separados mensalmente abrangendo o período dos últimos dois anos.
 Os dados nesse estudo são públicos e podem ser acessados nesse [link](https://dados.gov.br/dados/conjuntos-dados/comunicacoes-de-acidente-de-trabalho-cat-plano-de-dados-abertos-jun-2023-a-jun-2025).
 
-## **Limpeza e tratamento dos dados**
+## **2. LIMPEZA E TRATAMENTO DOS DADOS**
 
-Começamos importando as bibliotecas necessárias que serão usadas ao longo do projeto e depois organizando o caminho dos datasets baixados e abrindo o arquivo.
+Inicialmente, os arquivos mensais foram consolidados em um único dataset, permitindo uma visão integrada do período de 2023 a 2024. Em seguida, foram removidas colunas duplicadas ou irrelevantes para os objetivos do estudo, reduzindo a redundância e o ruído informacional.
 
+Foram identificados valores ausentes e inconsistentes, que foram tratados de forma diferenciada: nas variáveis categóricas, substituiu-se por rótulos como “Desconhecido”, enquanto nas variáveis numéricas ou de data aplicou-se imputação com valores mais frequentes (mode) ou conversão para valores nulos apropriados. Também foram eliminados registros com códigos inválidos, como “000000-Ignorado” ou “Zerado”.
+
+Adicionalmente, realizou-se a padronização dos nomes das colunas, substituindo espaços, caracteres especiais e abreviações confusas por identificadores uniformes. As variáveis de data, como Data de Acidente e Data de Nascimento, foram convertidas para o formato temporal adequado, permitindo a criação de novos atributos, como a idade em anos no momento do acidente. Por fim, normalizou-se o indicador de óbito, garantindo sua consistência como variável booleana.
+
+Esse processo de limpeza resultou em uma base de dados mais organizada, padronizada e livre de inconsistências, fornecendo condições adequadas para a realização das análises exploratórias subsequentes.
 ```python
 import os
 import re
@@ -36,17 +50,12 @@ file_paths = [
 dfs = [pd.read_csv(file, sep=";", encoding="latin1", low_memory=False) for file in file_paths]
 ```
 
-Agora fazemos a concatenação dos *datasets* e verificamos suas principais informações:
-
 ```python
 df_consolidado = pd.concat(dfs, ignore_index=True)
 df_consolidado.shape #verifica o tamanho do dataset
 df_consolidado.columns #mostra as colunas presentes e seus nomes
 df_consolidado.info #informações sobre valores ausentes e vazios
 ```
-
-Percebemos a presença de algumas colunas duplicadas, mal escritas e também desnecessárias para o nosso objetivo final. Além disso,
-o *dataset* contém valores ausentes ou zerados. Vamos excluir essas colunas e limpar esses dados para facilitar a análise.
 
 ```python
 
@@ -81,8 +90,6 @@ df_clean["Data Acidente"] = pd.to_datetime(df_clean["Data Acidente"], errors='co
 df_clean["Data Acidente"] = df_clean["Data Acidente"].fillna(df_clean["Data Acidente"].mode()[0])
 df_clean["Data Nascimento"] = pd.to_datetime(df_clean["Data Nascimento"], errors='coerce')
 ```
-Por fim, vamos apenas corrigir os nomes das colunas para remover espaços extras, abreviações confusas, e caracteres inválidos.
-
 ```python
 df_clean.rename(columns={
     "Unnamed: 0": "ID",
@@ -115,8 +122,6 @@ def normalize_columns(cols):
 def find_col(df, keywords):
     """
     Acha primeira coluna do df que contenha qualquer substring em keywords.
-    keywords pode ser lista de strings.
-    Retorna None se não encontrado.
     """
     cols = df.columns
     for kw in keywords:
@@ -130,7 +135,6 @@ def ensure_dir(d):
         os.makedirs(d)
 df.columns = normalize_columns(df.columns)
 ```
-Vamos converter as demais datas presentes no dataset, além de criar uma nova coluna chamada "idade_anos".
 
 ```python
 # Datas
@@ -165,7 +169,11 @@ else:
 df = df.replace({"desconhecido": np.nan, "nan": np.nan, "none": np.nan})
 ```
 
-Agora vamos elencar as estastícas descritivas gerais como total de registros (após limpeza); como também quantidade de municípios presentes, CBO (Cód. Brasileiro de Ocupação) e CNAE (Classificação Nacional de Atividades Econômicas) que estão presentes.
+## **3. ESTATÍSTICAS DESCRITIVAS GERAIS**
+Após a etapa de limpeza, foi possível calcular indicadores gerais do conjunto de dados. O período analisado contou com mais de **620 mil registros de acidentes de trabalho**, distribuídos em mais de **3 mil municípios.** 
+Foram identificados mais de **4,5 mil ocupações distintas (CBO)** e cerca de **950 atividades econômicas (CNAE)**. Aproximadamente **2,3 mil registros indicaram ocorrência de óbito**.
+
+A análise demográfica mostra idade média dos trabalhadores em torno de 38 anos, com distribuição variando de 7 a 125 anos, predominando faixas entre 28 e 46 anos. Esses números fornecem uma visão inicial do perfil dos acidentes e da população mais afetada, servindo de base para análises mais detalhadas.
 
 ```python
 # Números gerais
@@ -204,7 +212,10 @@ print("\nDescrição numérica (idade):\n", desc_num)
     75%        46.000000
     max       125.000000
 
-Agora criamos duas funções para facilitar a criação dos gráficos e visualização dos dados.
+## **4. PRINCIPAIS RECORRÊNCIAS**
+A análise das ocorrências permitiu identificar os elementos mais frequentes associados aos acidentes de trabalho. Entre eles destacam-se os agentes causadores, que evidenciam os principais fatores de risco no ambiente laboral; os municípios com maior número de registros, que concentram maior volume de notificações; além das ocupações (CBO) e setores econômicos (CNAE) mais afetados.
+
+Também foi analisada a relação entre os agentes presentes em acidentes fatais, oferecendo uma visão diferenciada sobre os eventos de maior gravidade. Esses resultados permitem compreender onde os riscos são mais recorrentes e auxiliam na definição de medidas preventivas direcionadas.
 
 ```python
 def topn_counts(df, col, n=10):
@@ -259,7 +270,7 @@ plot_topn(top_cnaes, "Top 10 - CNAE com Mais Acidentes", "Número de acidentes",
 
 ![CNAE com mais Acidentes](https://github.com/Benfluc/Projects/blob/main/project3/imgs/top10_cnaes.png)
 
-Agora vamos analisar os acidentes comparativamente por mês.
+Em seguida analisamos os acidentes comparativamente por mês.
 
 ```python
 if "data_acidente_parsed" in df.columns and not df["data_acidente_parsed"].isna().all():
@@ -291,7 +302,13 @@ if "data_acidente_parsed" in df.columns and not df["data_acidente_parsed"].isna(
 **Saída:**
 ![Acidentes por Mês](https://github.com/Benfluc/Projects/blob/main/project3/imgs/acidentes_por_mes.png)
 
-Plotando a distribuição por idade e por sexo
+## 5. PERFIL DEMOGRÁFICO
+
+A análise demográfica dos registros mostra a distribuição dos acidentes segundo sexo e idade dos trabalhadores. 
+Observa-se diferença na frequência entre homens e mulheres, refletindo a maior participação masculina em atividades de maior risco.
+Em relação à idade, a média dos trabalhadores acidentados é de aproximadamente 38 anos, com maior concentração entre 28 e 46 anos. 
+Também foi avaliada a relação entre idade e gravidade dos eventos, considerando os casos com registro de óbito.
+
 ```python
 #Distribuição de idade e sexo
 
@@ -328,3 +345,52 @@ if "idade_anos" in df.columns:
     plt.show()
     plt.close()
 ```
+**Saída:**
+![Acidentes por Sexo](https://github.com/Benfluc/Projects/blob/main/project3/imgs/Acidentes%20por%20Sexo.png)
+![Acidentes por Idade](https://github.com/Benfluc/Projects/blob/main/project3/imgs/Acidentes%20por%20idade.png)
+![Idade vs. Óbito](https://github.com/Benfluc/Projects/blob/main/project3/imgs/Idade%20vs%20%C3%93bito.png)
+
+## **6. CONCLUSÕES GERAIS E INSIGHTS**
+
+Entre janeiro de 2023 e dezembro de 2024, totalizando 24 meses, foram registrados 620.545 acidentes de trabalho, dos quais 2.362 (0,38%) resultaram em óbitos.
+
+Ao analisar a distribuição por sexo, observa-se uma predominância de acidentes envolvendo homens, com 413.785 ocorrências (66,68%), enquanto as mulheres registraram 204.315 casos (32,93%). 
+Essa diferença indica que os homens tiveram aproximadamente 102,5% mais acidentes do que as mulheres. Outros 2.430 casos (0,39%) não informaram o sexo e 15 (0,002%) foram classificados como indeterminados. A disparidade também se reflete nos acidentes fatais: 2.133 óbitos (90,30%) ocorreram entre homens, contra 222 (9,40%) entre mulheres, com 7 casos sem informação.
+
+Quanto às causas dos acidentes, destacam-se:
+
+- Acidentes de trânsito com motocicletas: 35.515 casos (5,72%)
+- Acidentes de trânsito com outros veículos: 25.624 casos (4,13%)
+- Impactos contra objetos: 24.251 casos (3,91%)
+- Quedas em ruas e estradas: 24.236 casos (3,91%)
+- Quedas em chão/superfície útil: 22.538 casos (3,63%)
+
+Nos acidentes fatais, veículos rodoviários lideram com 479 mortes (20,28%), seguidos por veículos não identificados ou classificados (254 óbitos, 10,75%), motocicletas e motonetas (225 óbitos, 9,53%), impactos contra objetos (185 óbitos, 7,83%) e quedas em ruas e estradas (137 óbitos, 5,80%).
+
+Analisando os setores econômicos:
+
+- Comércio varejista: 50.710 acidentes (8,17%)
+- Atividades de atendimento: 43.150 acidentes (6,95%)
+- Comércio atacadista: 21.138 acidentes (3,41%)
+- Transporte rodoviário: 20.773 acidentes (3,35%)
+- Fabricação de produtos: 17.878 acidentes (2,88%)
+
+No caso de acidentes fatais, o transporte rodoviário lidera com 360 óbitos (15,24%), seguido por comércio varejista (154 óbitos, 6,52%), comércio atacadista (104 óbitos, 4,40%), fabricação de produtos (65 óbitos, 2,75%) e construção de edifícios (57 óbitos, 2,41%).
+
+Em termos geográficos, São Paulo registra o maior número de acidentes (79.700 casos, 12,84%) e óbitos (192 mortes, 8,13%), seguido pelo Rio de Janeiro (24.546 acidentes, 3,96%; 78 óbitos, 3,30%), Curitiba (15.894 acidentes, 2,56%; 55 óbitos, 2,33%), Belo Horizonte (13.959 acidentes, 2,25%; 51 óbitos, 2,16%) e Brasília (13.505 acidentes, 2,18%; 38 óbitos, 1,61%).
+
+Quanto às ocupações, a categoria “desconhecido” concentra o maior número de acidentes (114.712 casos, 18,48%). Excluindo esta categoria, as ocupações mais afetadas foram:
+
+
+- Alimentadores de linha de produção: 75.963 acidentes (12,24%)
+- Técnicos de enfermagem: 62.866 acidentes (10,13%)
+- Motoristas de caminhão: 28.311 acidentes (4,56%)
+- Serventes de obras: 23.260 acidentes (3,75%)
+- Vendedores do comércio varejista: 18.212 acidentes (2,93%)
+
+Nos acidentes fatais, os motoristas de caminhão lideram com 802 óbitos (33,94%), seguidos por “desconhecido” (348 óbitos, 14,73%), alimentadores de linha de produção (159 óbitos, 6,73%), serventes de obras (118 óbitos, 5,00%), vigilantes (90 óbitos, 3,81%) e motociclistas (87 óbitos, 3,68%).
+
+Em resumo, os dados mostram uma prevalência significativa de acidentes entre homens, especialmente em setores ligados ao transporte rodoviário e comércio. Veículos, sobretudo motocicletas e veículos rodoviários, são os principais agentes causadores de acidentes, incluindo os fatais. Municípios economicamente importantes, como São Paulo e Rio de Janeiro, concentram os maiores números de ocorrências. A alta proporção de acidentes sem identificação clara da ocupação reforça a necessidade de aprimorar a qualidade dos dados para apoiar políticas públicas de prevenção e segurança no trabalho.
+
+
+
