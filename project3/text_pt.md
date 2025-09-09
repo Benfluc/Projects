@@ -293,9 +293,8 @@ if "data_acidente_parsed" in df.columns and not df["data_acidente_parsed"].isna(
 
 Plotando a distribuição por idade e por sexo
 ```python
-# --------------------
-# 11) Distribuição de idade e sexo
-# --------------------
+#Distribuição de idade e sexo
+
 ensure_dir("figs/demografia")
 if col_sexo:
     plt.figure(figsize=(6,4))
