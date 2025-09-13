@@ -118,19 +118,17 @@ Com a matriz de coocorrência construida, visualizamos através de um gráfico:
 **Saída:**
 ![Gráfico de Correlação de Compras](https://github.com/Benfluc/Projects/blob/main/project4/imgs/grafico_correla%C3%A7%C3%A3o_compras.png)
 
-
-produto = "20in Monitor"
+Por fim, identificamos o produto que queremos, nesse exemplo o '20in Monitor'. O código percorre a linha correspondente (excluindo o próprio produto) e retorna os três maiores valores encontrados ali.
+A vantagem desse sistema é que ele é facilmente ajustável, sendo uma ótima ferramenta de recomendação de compras baseada em histórico de compras de outros clientes.
 
 ```pyhton
+produto = "20in Monitor"
 linha = coocorrencia.loc[produto].drop(produto)
 top3 = linha.nlargest(3)
 
 print(produto)
 print(top3)
 ```
-
-Por fim, identificamos o produto que queremos, nesse exemplo o '20in Monitor'. O código percorre a linha correspondente (excluindo o próprio produto) e retorna os três maiores valores encontrados ali.
-A vantagem desse sistema é que ele é facilmente ajustável, sendo uma ótima ferramenta de recomendação de compras baseada em histórico de compras de outros clientes.
 
 **Saída:**
 
