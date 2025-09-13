@@ -135,7 +135,7 @@ print(top3)
     AAA Batteries (4-pack)      196
     Name: 20in Monitor, dtype: int64
 
-Conclusion
+## Conclusion
 
 The project demonstrated how historical sales data can be transformed into a practical and intelligent product recommendation tool.
 Through preprocessing and the creation of a binary matrix of customers versus products, it was possible to identify co-occurrence patterns, highlighting which products are often bought together.
