@@ -1,0 +1,27 @@
+column,non_null,%_non_null,dtype
+Row ID,9994,100.0,int64
+Order ID,9994,100.0,object
+Order Date,3974,39.763858314988994,datetime64[ns]
+Ship Date,3878,38.803281969181505,datetime64[ns]
+Ship Mode,9994,100.0,object
+Customer ID,9994,100.0,object
+Customer Name,9994,100.0,object
+Segment,9994,100.0,object
+Country,9994,100.0,object
+City,9994,100.0,object
+State,9994,100.0,object
+Postal Code,9994,100.0,int64
+Region,9994,100.0,object
+Product ID,9994,100.0,object
+Category,9994,100.0,object
+Sub-Category,9994,100.0,object
+Product Name,9994,100.0,object
+Sales,9994,100.0,float64
+Quantity,9994,100.0,int64
+Discount,9994,100.0,float64
+Profit,9994,100.0,float64
+Order Year,3974,39.763858314988994,float64
+Order Month,9994,100.0,object
+Order DayOfWeek,3974,39.763858314988994,object
+Ship Delay (days),2650,26.515909545727435,float64
+Profit Margin,9994,100.0,float64
