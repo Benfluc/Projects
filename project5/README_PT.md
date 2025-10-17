@@ -18,8 +18,8 @@ revelam correlações entre eficiência operacional e lucratividade, destacando 
 - [Portuguese Version](README_PT.md) – esse documento.
 
 ## Artigo Completo
-- [English Version]()
-- [Portuguese Version]()
+- [Versão em Inglês](https://github.com/Benfluc/Projects/blob/main/project5/article_en.md)
+- [Versão em Português](https://github.com/Benfluc/Projects/blob/main/project5/article_pt.md)
 
 ## Código Fonte:
 - Todos os códigos podem ser acessados na [pasta de códigos](https://github.com/Benfluc/Projects/tree/main/project5/codes)  
