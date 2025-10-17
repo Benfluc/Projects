@@ -16,7 +16,7 @@ The study provides a data-driven understanding of sales behavior, supporting bet
 - [Portuguese Version](https://github.com/Benfluc/Projects/blob/main/project1/Artigo_PT.pdf)
 
 ## Source Code
-- All scripts and notebooks are available in the [code folder](https://github.com/Benfluc/Projects/tree/main/project1/codes)  
+- All scripts and notebooks are available in the [code folder](https://github.com/Benfluc/Projects/tree/main/project5/codes)  
 
 ## Images and Visualizations
-- Charts, graphs, and other project images can be found in the [images folder](https://github.com/Benfluc/Projects/tree/main/project1/imgs)
+- Charts, graphs, and other project images can be found in the [images folder](https://github.com/Benfluc/Projects/tree/main/project5/imgs)
