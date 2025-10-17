@@ -9,6 +9,9 @@ O estudo oferece uma compreensão baseada em dados sobre o comportamento das ven
 revelam correlações entre eficiência operacional e lucratividade, destacando oportunidades para aumentar receitas e reduzir custos logísticos.
 
 ## Conquistas / Resultados:
+- Otimização de Lucro através da identificação dos setores mais lucrativos bem como correlações entre Volume, margem e rentabilidade;
+- Possibilidades de melhoria na logística de envios de produtos e redução do impacto de financeiro causado por atrasos;
+- Mapeamento de estratégias para promoções e descontos que capazes de elevar as vendas e aumentar o lucro.
 
 ## Documentação do Projeto
 - [English Version](README.md) – visão geral e explicação em Inglês. 
