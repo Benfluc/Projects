@@ -19,7 +19,7 @@ revelam correlações entre eficiência operacional e lucratividade, destacando 
 - [Portuguese Version]()
 
 ## Código Fonte:
-- Todos os códigos podem ser acessados na [pasta de códigos]()  
+- Todos os códigos podem ser acessados na [pasta de códigos](https://github.com/Benfluc/Projects/tree/main/project5/codes)  
 
 ## Imagens e Visualização:
-- Tables, gráficos e imagens podem ser visualizados na [pasta de imagens]()
+- Tables, gráficos e imagens podem ser visualizados na [pasta de imagens](https://github.com/Benfluc/Projects/tree/main/project5/imgs)
