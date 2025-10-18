@@ -10,11 +10,11 @@ A análise por categoria revela diferenças substanciais na lucratividade. A emp
 Embora Tecnologia e Material de Escritório apresentem os maiores lucros totais (cerca de $145,5 mil e $122,5 mil, respectivamente), a categoria Móveis teve desempenho muito inferior, com lucro total de apenas ~$18,4 mil. 
 Em termos de margem, isso significa que Móveis obteve menos de 2,5% de margem de lucro sobre $742 mil em vendas, praticamente operando no breakeven. Em contraste, Escritório e Tecnologia alcançaram margens em torno de 17%, contribuindo bem mais para o resultado final.
 
-No nível de subcategoria, identificamos quais linhas de produtos impulsionam o lucro e quais o reduzem. As subcategorias mais lucrativas foram: Copiadoras (Copiers), liderando com ~$55,6 mil de lucro; Telefones (Phones) com ~$44,5 mil; 
-Acessórios de tecnologia (~$41,9 mil); seguidos de Papel (Paper) (~$34,0 mil) e Fichários (Binders) (~$30,2 mil). Esses grupos, em sua maioria pertencentes às categorias de Escritório e Tecnologia, operam com margens altas e volumes sólidos. 
+No nível de subcategoria, identificamos quais linhas de produtos impulsionam o lucro e quais o reduzem. As subcategorias mais lucrativas foram: Copiadoras (Copiers), liderando com $55,6 mil de lucro; Telefones (Phones) com $44,5 mil; 
+Acessórios de tecnologia ($41,9 mil); seguidos de Papel (Paper) ($34,0 mil) e Fichários (Binders) ($30,2 mil). Esses grupos, em sua maioria pertencentes às categorias de Escritório e Tecnologia, operam com margens altas e volumes sólidos. 
 Por outro lado, as subcategorias com pior desempenho financeiro foram ligadas à categoria de Móveis e alguns itens de escritório de baixo giro. Em especial, Mesas (Tables) acumulou um prejuízo de aproximadamente -$17,7 mil, e Estantes (Bookcases) cerca de -$3,5 mil, 
-indicando que essas linhas geraram vendas com margens negativas ao longo do período. Além disso, a subcategoria Suprimentos (Supplies) também fechou no vermelho (~-$1,2 mil). 
-Subcategorias de baixo lucro ou próximas do zero incluíram Fixadores (Fasteners) (~$949) e Máquinas (Machines) (~$3,4 mil), sugerindo que tais produtos podem não estar cobrindo seus custos operacionais.
+indicando que essas linhas geraram vendas com margens negativas ao longo do período. Além disso, a subcategoria Suprimentos (Supplies) também fechou no vermelho (-$1,2 mil). 
+Subcategorias de baixo lucro ou próximas do zero incluíram Fixadores (Fasteners) ($949) e Máquinas (Machines) ($3,4 mil), sugerindo que tais produtos podem não estar cobrindo seus custos operacionais.
 
 Ao aprofundar no nível de produto individual, notamos casos extremos que merecem atenção. Por exemplo, o produto Canon imageCLASS 2200 Advanced Copier (uma copiadora de alto valor) gerou o maior lucro individual do catálogo, c
 om aproximadamente $25,2 mil de lucro total acumulado. Isso mostra o potencial de itens de alto preço e margem elevada para alavancar os resultados. Em contraste, alguns produtos foram vendidos consistentemente com prejuízo. 
@@ -30,14 +30,14 @@ de rever custos ou descontos praticados nesses itens.
 ### 1.1 Padrões Regionais e de Segmento na Lucratividade
 
 Investigamos se a lucratividade varia por região geográfica ou por segmento de cliente (Consumo, Corporativo, Home Office). Os dados mostram diferenças relevantes entre regiões dos EUA atendidas pela Superstore. 
-A Região Oeste foi a mais lucrativa, com aproximadamente $108,4 mil de lucro total, seguida pela Leste (~$91,5 mil). Em contraste, a Região Sul (~$46,7 mil) e especialmente a Região Central (~$39,7 mil) tiveram desempenho bem mais fraco. 
+A Região Oeste foi a mais lucrativa, com aproximadamente $108,4 mil de lucro total, seguida pela Leste ($91,5 mil). Em contraste, a Região Sul ($46,7 mil) e especialmente a Região Central ($39,7 mil) tiveram desempenho bem mais fraco. 
 Em termos percentuais, o Oeste sozinho respondeu por cerca de 35% do lucro total, enquanto o Centro contribuiu com apenas ~13%. Uma das causas identificadas é o fraco desempenho de determinadas categorias em certas regiões. 
 Notavelmente, na Região Central, as vendas de Móveis resultaram em prejuízo líquido (aprox. -$2,9 mil). Ou seja, todo o modesto lucro obtido no Centro veio de Escritório e Tecnologia, enquanto a categoria de Móveis nessa região acabou no negativo. 
 Esse dado sinaliza um possível problema regional específico – por exemplo, custos de frete mais altos ou necessidade de descontos maiores para vender móveis no Centro do país, o que acabou eliminando a margem. As demais regiões não apresentaram categorias negativas, 
 embora o lucro de Móveis seja baixo em todas elas (no Oeste, por exemplo, Móveis lucrou apenas $11,5 mil vs. >$44 mil de Tecnologia).
 
 Quanto aos segmentos de clientes, todos os três segmentos (Consumo, Corporativo e Home Office) foram lucrativos, porém com diferentes perfis. 
-O segmento Consumer (B2C) gerou o maior volume de vendas e o maior lucro total (~$134,1 mil), seguido pelo Corporate (B2B corporativo) (~$91,0 mil) e pelo Home Office (~$60,3 mil). 
+O segmento Consumer (B2C) gerou o maior volume de vendas e o maior lucro total ($134,1 mil), seguido pelo Corporate (B2B corporativo) (~$91,0 mil) e pelo Home Office (~$60,3 mil). 
 Esse resultado acompanha o tamanho do mercado atendido por cada segmento (o varejo consumidor final sendo o maior). 
 Entretanto, ao observar a margem de lucro relativa, percebe-se que o segmento Home Office foi o mais rentável proporcionalmente: sua margem média foi de ~14,0%, comparada a 13,0% no segmento Corporate e apenas 11,5% no Consumer. 
 Em outras palavras, apesar de vender menos, o segmento Home Office obteve um lucro proporcionalmente maior por dólar vendido. 
@@ -53,7 +53,7 @@ Isso sugere oportunidades de ajuste fino na estratégia, como atenção especial
 Um dos objetivos era verificar correlações entre volume de vendas, margem de lucro e rentabilidade. Em outras palavras, itens que vendem muito são os que dão mais lucro? Ou será que produtos de nicho com margens altas contribuem mais proporcionalmente?
 A análise indica que maior volume de vendas nem sempre se traduz em maior rentabilidade unitária. De fato, encontramos uma correlação inversa entre volume e margem ao agrupar os dados por subcategoria. 
 Subcategorias com vendas anuais muito altas tendem a operar com margens menores, enquanto subcategorias de nicho (menor volume) frequentemente têm margens maiores. 
-Por exemplo, a subcategoria Mesas (Tables) figurou entre as maiores em volume de vendas (~US$207 mil ao longo do período), porém teve margem de lucro negativa (~-8,5% de margem) levando a prejuízo. 
+Por exemplo, a subcategoria Mesas (Tables) figurou entre as maiores em volume de vendas (US$207 mil ao longo do período), porém teve margem de lucro negativa (-8,5% de margem) levando a prejuízo. 
 Isso reflete uma estratégia de “giro” com descontos ou custos altos, onde apesar do grande volume vendido, cada dólar vendido perdeu dinheiro em média. Em contraste, uma subcategoria de menor receita como Copiadoras (Copiers) (~US$150 mil em vendas) 
 foi a mais rentável, obtendo margem de ~37% e alto lucro absoluto. Outros exemplos seguem essa tendência: Acessórios e Artigos de Papelaria (Labels, Art) têm vendas modestas porém margens acima de 24%, enquanto Cadeiras (Chairs) e Máquinas (Machines), 
 apesar de vendas elevadas, operam com margens baixas (~8% e ~1,8%, respectivamente).
@@ -173,13 +173,21 @@ que aumentem vendas ou ticket médio, em vez de simplesmente reduzir preços ind
 ## 4. Resumo das recomendações
 
 . Concentrar vendas nas categorias de maior margem (copiadoras, telefones) para aumentar o lucro
+
 . Reavaliar ou descontinuar subcategorias com prejuízo (mesas, estantes) para eliminar perdas
+
 . Rever estratégias em mercados com prejuízo (Texas, Ohio) para reverter resultados negativos
+
 . Priorizar remessas via envio padrão para reduzir custos de frete
+
 . Consolidar pedidos e otimizar rotas para diminuir despesas logísticas
+
 . Manter estoque regional de itens volumosos (móveis) para reduzir custos de transporte em longas distâncias
+
 . Limitar descontos acima de 20% para evitar vendas com prejuízo
+
 . Revisar preços de produtos com margem negativa para recuperar rentabilidade
+
 . Oferecer descontos apenas em itens de alta margem ou excesso de estoque, evitando promoções gerais
 
 
