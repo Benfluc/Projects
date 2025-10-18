@@ -196,7 +196,7 @@ for i in range(corr.shape[0]):
         plt.text(j, i, f"{corr.iloc[i,j]:.2f}", ha="center", va="center")
 save_plot(fig, "correlation_matrix.png")
 ```
-All generated tables and charts can be viewed [here](https://github.com/Benfluc/Projects/tree/main/project5/imgs)
+All generated tables and charts can be viewed [here](https://github.com/Benfluc/Projects/tree/main/project5/imgs).
 
 Based on all this information, it was possible to extract valuable insights that highlight areas for improvement and growth opportunities for the company, such as increasing profitability and optimizing the logistics of order transportation, thereby reducing losses caused by delays.
 You can check all of this in detail here: [results and recommendations](results.md)
