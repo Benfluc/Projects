@@ -2,7 +2,8 @@
 
 ## Introduction
 
-This text provides an explanation of the code, how it was built, and how it was executed. If you prefer, you can go straight to the section with the obtained results and management suggestions [here](results.md)
+This text provides an explanation of the code, how it was built, and how it was executed. If you prefer, you can go straight to the section with the obtained results and management suggestions [here](results.md).
+
 The dataset used in this study was obtained from Kaggle.com and can be viewed in the [code folder](https://github.com/Benfluc/Projects/tree/main/project5/codes).
 The data contains 9,994 sales records from a store, including details such as purchase date, shipping date, product type, category, profit, and more.
 The main goal of this study was to perform an Exploratory Data Analysis (EDA) to identify areas for improvement and potential opportunities for store managers.
