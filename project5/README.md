@@ -10,6 +10,8 @@ The study provides a data-driven understanding of sales behavior, supporting bet
 - Opportunities for improvement in product shipping logistics and reduction of the financial impact caused by delays;
 - Mapping of strategies for promotions and discounts capable of boosting sales and increasing profit.
 
+  All results and details can be seen [here](results.md)
+
 ## Project Documentation
 - [English Version](README.md) – this document  
 - [Portuguese Version](README_PT.md) – overview and explanation in Portuguese
