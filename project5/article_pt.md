@@ -1,7 +1,8 @@
 # Compreendendo o Comportamento de Vendas através da AED
 
 ## Introdução
-Esse texto traz a explicação do código e de como foi feito e executado. Caso você queira, você pode checar logo a parte de resultados obtidos e sugestões aos gestores [aqui](results_pt.md)
+Esse texto traz a explicação do código e de como foi feito e executado. Caso você queira, você pode checar logo a parte de resultados obtidos e sugestões aos gestores [aqui](results_pt.md).
+
 O dataset usado nesse estudo foi adquirido no site Kaggle.com e pode ser visualizado na [pasta de códigos](https://github.com/Benfluc/Projects/tree/main/project5/codes).
 Os dados correspondem a 9994 iformações de vendas de uma loja, com informações como a data da compra, data do envio, tipo de produto, categoria, lucro, etc.
 O objetivo desse estudo foi realizar uma análise exploratória de dados (EDA) afim de identificar pontos de melhoria e oportunidades para os gestores da loja.
