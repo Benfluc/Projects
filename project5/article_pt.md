@@ -43,7 +43,7 @@ print("Verificação de duplicatas:")
 print("Duplicatas por Row ID:", df["Row ID"].duplicated().sum())
 print("Duplicatas por Order ID + Product ID:", df.duplicated(subset=["Order ID", "Product ID"]).sum())
 ```
-OUTPUT:
+SAÍDA:
 
       Verificação de duplicatas:
       Duplicatas por Row ID: 0
