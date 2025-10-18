@@ -13,6 +13,8 @@ revelam correlações entre eficiência operacional e lucratividade, destacando 
 - Possibilidades de melhoria na logística de envios de produtos e redução do impacto de financeiro causado por atrasos;
 - Mapeamento de estratégias para promoções e descontos que capazes de elevar as vendas e aumentar o lucro.
 
+  Todos os resultados detalhados podem ser vistos [aqui](results_pt.md)
+
 ## Documentação do Projeto
 - [English Version](README.md) – visão geral e explicação em Inglês. 
 - [Portuguese Version](README_PT.md) – esse documento.
