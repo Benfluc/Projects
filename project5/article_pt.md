@@ -190,7 +190,7 @@ for i in range(corr.shape[0]):
         plt.text(j, i, f"{corr.iloc[i,j]:.2f}", ha="center", va="center")
 save_plot(fig, "correlation_matrix.png")
 ```
-Todas as tabelas e gráficos gerados podem ser visualizados [aqui](https://github.com/Benfluc/Projects/tree/main/project5/imgs)
+Todas as tabelas e gráficos gerados podem ser visualizados [aqui](https://github.com/Benfluc/Projects/tree/main/project5/imgs).
 
 Com base em todas essas informações, foi possível extrair insights valiosos que revelam pontos de melhoria e oportunidades de crescimento para a empresa, como o aumento do lucro e a otimização da logística 
 de transporte de pedidos, reduzindo prejuízos causados por atrasos. Você pode checar tudo isso aqui [resultados e recomendações](results_pt.md).
