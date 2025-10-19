@@ -20,6 +20,10 @@ The study provides a data-driven understanding of sales behavior, supporting bet
 - [English Version](https://github.com/Benfluc/Projects/blob/main/project5/article_en.md)
 - [Portuguese Version](https://github.com/Benfluc/Projects/blob/main/project5/article_pt.md)
 
+## Results and recommendations
+- [English version](results.md)
+- [Portugues version](results_pt.md)
+
 ## Source Code
 - All scripts and notebooks are available in the [code folder](https://github.com/Benfluc/Projects/tree/main/project5/codes)  
 
