@@ -23,6 +23,10 @@ revelam correlações entre eficiência operacional e lucratividade, destacando 
 - [Versão em Inglês](https://github.com/Benfluc/Projects/blob/main/project5/article_en.md)
 - [Versão em Português](https://github.com/Benfluc/Projects/blob/main/project5/article_pt.md)
 
+## Resultados e Recomendações
+- [Versão em Inglês](results.md)
+- [Versão em Português](results_pt.md)
+
 ## Código Fonte:
 - Todos os códigos podem ser acessados na [pasta de códigos](https://github.com/Benfluc/Projects/tree/main/project5/codes)  
 
