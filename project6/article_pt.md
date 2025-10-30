@@ -2,7 +2,7 @@
 
 O Power BI é uma ferramenta desenvolvida pela Microsoft cuja principal função é transformar dados brutos em informações visuais e interativas de forma ágil e fácil, permitindo análises de negócios (Business Intelligence) de forma simples, dinâmica e intuitiva.
 Ele possibilita conectar diferentes fontes de dados, criar dashboards e relatórios personalizados, e compartilhar insights em tempo real, auxiliando gestores e analistas na tomada de decisões baseada em dados (data-driven decision making).
-Para esse projeto, utilizamos a base de dados de vendas 'superstore' adquirida através do site Kaggle e que pode ser baixada [aqui](sources/superstore.csv).
+Para esse projeto, utilizamos a base de dados de vendas 'superstore' adquirida através do site Kaggle e que pode ser baixada [aqui](sources/Sales_Store.csv).
 
 ## INTRODUÇÃO - VISUALIZAÇÕES 
 
