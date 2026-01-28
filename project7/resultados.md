@@ -42,5 +42,12 @@ De forma análoga, ao selecionar o operador com pior score, verifica-se que suas
 
 Destaca-se que, embora tenha registrado um número elevado de atendimentos e um tempo médio de atendimento reduzido, esses indicadores, quando analisados de forma isolada, não refletem um bom desempenho global, reforçando a importância de uma avaliação integrada por meio do score consolidado.
 
-## 4. Insigths para a Gestão
+## 4. Insights para a Gestão
+
+A análise dos dados operacionais permitiu extrair insights relevantes para o apoio à tomada de decisão gerencial e para o aprimoramento da estratégia de atuação da equipe. 
+Um dos principais pontos observados é que os operadores com melhor desempenho apresentaram atuação consistente em todas as campanhas, com fechamento de contratos distribuído entre elas. Em contrapartida, os operadores com pior desempenho concentraram seus fechamentos em apenas algumas campanhas específicas. Esse comportamento sugere que colaboradores mais engajados, versáteis e expostos a diferentes campanhas possuem maiores chances de êxito, seja pela ampliação do repertório de abordagens, seja pela maior adaptação aos diferentes perfis de clientes.
+
+Outro insight relevante refere-se ao tempo médio de atendimento. Verificou-se que os operadores com melhor score apresentam tempos médios de atendimento acima da média geral da operação, que é de aproximadamente 490 segundos, enquanto os operadores com pior desempenho tendem a operar abaixo desse valor. Esse resultado indica que atendimentos mais longos, quando bem conduzidos, podem refletir maior capacidade de escuta, argumentação e negociação, fatores essenciais para o fechamento de contratos. Dessa forma, a busca por atendimentos excessivamente rápidos pode não ser a estratégia mais eficaz do ponto de vista comercial.
+
+Por fim, observou-se que os operadores com melhor score realizam até o dobro de atendimentos quando comparados aos operadores com pior desempenho. Esse fator reforça a relação direta entre volume de contatos e resultados comerciais, uma vez que, quanto maior o número de interações efetivas com clientes, maiores são as oportunidades de conversão e fechamento de negócios. Esse insight destaca a importância de equilibrar produtividade, qualidade do atendimento e capacidade de conversão, elementos que, combinados, impactam positivamente o desempenho global da operação.
 
