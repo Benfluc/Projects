@@ -53,5 +53,6 @@ As principais perguntas que a solução de BI deve responder são:
 Ao final do projeto, a solução permitiu visualizar de forma completa a operação, com dados confiáveis, indicadores claros e 
 dashboards orientados à tomada de decisão, simulando um ambiente corporativo real de BI e Analytics.
 
-Para saber mais sobre a metodologia do trabalho clique aqui
-Para visualizar os resultados completos clique aqui
+ - Para saber mais sobre a metodologia do trabalho clique aqui
+
+ - Para visualizar os resultados completos clique aqui
