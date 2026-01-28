@@ -55,8 +55,8 @@ dashboards orientados à tomada de decisão, simulando um ambiente corporativo r
 
 ## 7. Documentação
 
- - Para saber mais sobre a metodologia do trabalho clique aqui
+ - Para saber mais sobre a metodologia do trabalho [clique aqui](https://github.com/Benfluc/Projects/blob/main/project7/metodologia.md)
 
- - Para visualizar os resultados completos clique aqui
+ - Para visualizar os resultados completos [clique aqui](https://github.com/Benfluc/Projects/blob/main/project7/resultados.md)
 
  - Todos os documentos e arquivos do projeto podem ser acessados na pasta 'sources'
