@@ -59,4 +59,4 @@ dashboards orientados à tomada de decisão, simulando um ambiente corporativo r
 
  - Para visualizar os resultados completos [clique aqui](https://github.com/Benfluc/Projects/blob/main/project7/resultados.md)
 
- - Todos os documentos e arquivos do projeto podem ser acessados na pasta 'sources'
+ - Todos os documentos e arquivos do projeto podem ser acessados na pasta ['sources'](https://github.com/Benfluc/Projects/tree/main/project7/sources)
