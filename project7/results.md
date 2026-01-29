@@ -27,7 +27,7 @@ By consolidating multiple metrics into a single score, the solution reduces bias
 
 ## 3. Analytics
 
-![Dashboard de BI](https://github.com/Benfluc/Projects/blob/main/project7/sources/Dados%20por%20Operador.png)
+![Dashboard de BI](https://github.com/Benfluc/Projects/blob/main/project7/sources/Analytics.png)
 
 On the initial screen, two distinct rankings are presented: the ranking of the best-performing operators and the ranking of the lowest-performing operators, allowing for an immediate view of the performance extremes within the operation.
 
