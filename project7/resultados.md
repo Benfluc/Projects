@@ -26,7 +26,7 @@ Essa abordagem é fundamental, pois a avaliação isolada de um único indicador
 
 ## 3. Analytics
 
-![Dashboard de BI](https://github.com/Benfluc/Projects/blob/main/project7/sources/Dados%20por%20Operador.png)
+![Dashboard de BI](https://github.com/Benfluc/Projects/blob/main/project7/sources/Analytics.png)
 Na tela inicial são apresentados dois rankings distintos: o ranking dos melhores operadores e o ranking dos piores operadores, permitindo uma visualização imediata dos extremos de desempenho da operação.
 
 Na parte inferior da tela, são exibidos cartões contendo as principais métricas de avaliação, incluindo tempo médio de atendimento, dias e horas trabalhadas, quantidade de atendimentos realizados, número de contratos fechados, valores recuperados, além das taxas de abandono e taxa de conversão, proporcionando uma visão consolidada e objetiva da performance individual.
