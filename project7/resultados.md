@@ -51,3 +51,5 @@ Outro insight relevante refere-se ao tempo médio de atendimento. Verificou-se q
 
 Por fim, observou-se que os operadores com melhor score realizam até o dobro de atendimentos quando comparados aos operadores com pior desempenho. Esse fator reforça a relação direta entre volume de contatos e resultados comerciais, uma vez que, quanto maior o número de interações efetivas com clientes, maiores são as oportunidades de conversão e fechamento de negócios. Esse insight destaca a importância de equilibrar produtividade, qualidade do atendimento e capacidade de conversão, elementos que, combinados, impactam positivamente o desempenho global da operação.
 
+Caso queira acessar o arquivo completo interativo, basta fazer o download do arquivo do Power Bi [aqui](https://github.com/Benfluc/Projects/blob/main/project7/sources/Contact_Center.pbix)
+
