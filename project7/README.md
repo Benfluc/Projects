@@ -57,6 +57,6 @@ At the end of the project, the solution enabled a comprehensive view of the oper
 
  - To learn more about the work methodology [click here](https://github.com/Benfluc/Projects/blob/main/project7/metodologia.md)
 
- - To view the full results [click here](https://github.com/Benfluc/Projects/blob/main/project7/resultados.md)
+ - To view the full results [click here](https://github.com/Benfluc/Projects/blob/main/project7/results.md)
 
  - All project documents and files can be accessed in the ['sources'](https://github.com/Benfluc/Projects/tree/main/project7/sources) folder.
