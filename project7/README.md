@@ -55,7 +55,7 @@ At the end of the project, the solution enabled a comprehensive view of the oper
 
 ## 7. Documentation
 
- - To learn more about the work methodology [click here](https://github.com/Benfluc/Projects/blob/main/project7/metodologia.md)
+ - To learn more about the work methodology [click here](https://github.com/Benfluc/Projects/blob/main/project7/methodology.md)
 
  - To view the full results [click here](https://github.com/Benfluc/Projects/blob/main/project7/results.md)
 
