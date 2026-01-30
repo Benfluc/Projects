@@ -10,9 +10,9 @@ Additionally, this screen consolidates information regarding the total amounts r
 
 ![Dashboard de BI](https://github.com/Benfluc/Projects/blob/main/project7/sources/Dados%20por%20Operador.png)
 
-Em seguida, são apresentados os rankings por operador, destacando os melhores e piores desempenhos com base nos principais indicadores da operação, como tempo médio de atendimento, taxa de conversão e taxa de abandono.
+Next, operator-level rankings are presented, highlighting the best and worst performances based on the operation’s key indicators, such as average handling time, conversion rate, and abandonment rate.
 
-Adicionalmente, é possível identificar os dias do mês em que cada operador realizou o fechamento de contratos, bem como as campanhas nas quais obteve melhor desempenho.
+Additionally, it is possible to identify the days of the month on which each operator closed contracts, as well as the campaigns in which they achieved their best performance.
 
 ![Dashboard de BI](https://github.com/Benfluc/Projects/blob/main/project7/sources/indicadores%20do%208.png)
 
