@@ -6,7 +6,11 @@ Para esse projeto, utilizamos a base de dados de vendas 'superstore' adquirida a
 
 ## INTRODUÇÃO - VISUALIZAÇÕES 
 
-Com os dados devidamente carregados, a primeira visualização elaborada foi a de vendas por produto, a qual nos permite identificar quais itens apresentam maior volume de comercialização. 
+![Sales_Map](img/map_sales.png)
+
+Com os dados devidamente carregados e tratados, na página inicial, mostramos os dados gerais de vendas, clientes, produtos, categorias, cidades atendidas e o mapa com as vendas. 
+
+A primeira visualização elaborada de forma detalhada foi a de vendas por produto, a qual nos permite identificar quais itens apresentam maior volume de comercialização. 
 Embora essa informação pareça, à primeira vista, relativamente simples, ela pode fornecer insights estratégicos bastante valiosos.
 
 Por exemplo, a análise dos produtos mais vendidos pode indicar tendências de consumo, auxiliar na definição de estoques ideais, orientar campanhas de marketing direcionadas e identificar oportunidades de aumento de margem por meio da priorização de itens com melhor desempenho. Além disso, ao cruzar esses dados com outras variáveis, como região, período, categoria ou perfil de cliente, é possível obter uma compreensão mais profunda do comportamento do mercado, apoiando decisões de planejamento e gestão comercial mais assertivas.
