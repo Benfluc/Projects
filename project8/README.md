@@ -12,7 +12,7 @@ The dashboard is designed to support data-driven decision-making through clear K
 - Identified sales concentration patterns and high-performing products and regions.
 - Demonstrated the practical application of Business Intelligence to support managerial and strategic decision-making.
 
-  All results and details can be seen [here](results.md)
+  All results and details can be seen [here](results_pt.md)
 
 ## Project Documentation
 - [English Version](README.md) – this document  
