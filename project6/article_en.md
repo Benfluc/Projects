@@ -6,6 +6,9 @@ For this project, we used the Superstore Sales dataset obtained from Kaggle, whi
 
 ## Introduction – Visualizations
 
+![Sales_Map](img/map_sales.png)
+With the data properly loaded and processed, the home page presents general information on sales, customers, products, categories, served cities, and a map displaying sales.
+
 With the data properly loaded, the first visualization created was sales by product, which allows us to identify which items have the highest sales volume.
 Although this information may seem relatively simple at first glance, it can provide highly valuable strategic insights.
 
