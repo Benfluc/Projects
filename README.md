@@ -4,7 +4,7 @@ Portfolio of applied data science, machine learning, and business intelligence p
 
 **Stack:** Python · Pandas · Scikit-learn · TensorFlow/Keras · NumPy · Power BI · Jupyter Notebook
 
-**Contact:** [LinkedIn](https://www.linkedin.com/in/SEU-LINK-AQUI) · [Portfolio site](https://benfluc.github.io) · lucio.benfica@icloud.com
+**Contact:** [LinkedIn](https://www.linkedin.com/in/lúcio-j-benfica-6903a3103/) · [Portfolio site](https://benfluc.github.io) · lucio.benfica@icloud.com
 
 ---
 
