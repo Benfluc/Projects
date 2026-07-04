@@ -30,7 +30,7 @@ To predict and classify clients based on their probability of default using a da
 
 ## Results and recommendations
 - [English version](results.md)
-- [Portugues version](results_pt.md)
+- [Portuguese version](results_pt.md)
 
 ## Source Code
 - All scripts and notebooks are available in the [code folder](https://github.com/Benfluc/Projects/tree/main/project9/codes)  
