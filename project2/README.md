@@ -1,4 +1,4 @@
-# An Study About Logistics Cost Minimization with Northwest Corner Rule
+# A Study About Logistics Cost Minimization with Northwest Corner Rule
 
 ## Overview
 This project focuses on logistics cost minimization through the classical transportation 
