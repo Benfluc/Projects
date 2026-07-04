@@ -20,7 +20,7 @@ The dashboard is designed to support data-driven decision-making through clear K
 
 ## Results and recommendations
 - [English version](results.md)
-- [Portugues version](results_pt.md)
+- [Portuguese version](results_pt.md)
 
 ## Source Code
 - All scripts and notebooks are available in the [code folder](https://github.com/Benfluc/Projects/tree/main/project8/codes)  
