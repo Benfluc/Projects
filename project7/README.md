@@ -20,7 +20,7 @@ The solution aims to:
 
  3. Stakeholders and Information Needs
 
-| Stakeholder           | Necessidade |
+| Stakeholder           | Information Needs |
 |-----------------------|-------------|
 | Board of Directors | Consolidated view, trends, and results |
 | Operational Management | SLA, productivity, efficiency by channel |
