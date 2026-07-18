@@ -15,8 +15,8 @@ Develop an end-to-end full stack movie search platform, covering the complete so
 - **Tools:** Git, GitHub, VS Code
 
 ## Application Development Process
-- [English Version](Development.md) 
-- [Portuguese Version](Development_pt.md)
+- [English Version](Development.md) – step-by-step development documentation
+- [Portuguese Version](Development_PT.md) – documentação do processo de desenvolvimento
 
 ## Project Documentation
 - [English Version](README.md) – English
