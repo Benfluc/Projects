@@ -16,6 +16,11 @@ Desenvolver uma plataforma full stack de consulta de filmes, abrangendo todo o c
 - **Formato de Dados:** JSON
 - **Ferramentas:** Git, GitHub, VS Code
 
+## Processo de Desenvolvimento da Aplicação
+
+- [Versão em Inglês](Development.md) – documentação do desenvolvimento passo a passo
+- [Versão em Português](Development_PT.md) – documentação do processo de desenvolvimento
+
 ## Documentação do Projeto
 
 - [Versão em Inglês](README.md) – visão geral e explicação em inglês
