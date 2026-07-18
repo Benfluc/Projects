@@ -52,4 +52,4 @@ The project ships as three folders — `backend`, `frontend`, `database` — wit
 ## What this project touches
 Cleaning and modeling a large, imperfect real-world dataset; making a deliberate call not to over-normalize data that can't support it; SQL string processing without procedural code; debugging constraint and locking issues in SQLite; working around a native-dependency wall on Windows; building a small, parameterized, injection-safe REST API; and a React front end that evolved from a static mockup into a fully data-driven UI based on real usability feedback.
 
-The final project can be viewed [here](https://github.com/Benfluc/CineStack).
+The final product of this project can be viewed [here](https://github.com/Benfluc/CineStack).
