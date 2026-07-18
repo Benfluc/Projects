@@ -14,9 +14,14 @@ Develop an end-to-end full stack movie search platform, covering the complete so
 - **Data Format:** JSON
 - **Tools:** Git, GitHub, VS Code
 
+## Development Process
+- [English Version](Development.md) - 
+- [Portuguese Version](Development_pt.md)
+
 ## Project Documentation
-- [English Version](README.md) – this document  
-- [Portuguese Version](README_PT.md) – overview and explanation in Portuguese
+Application Development Process
+- [English Version](README.md) – English
+- [Portuguese Version](README_PT.md) - Portuguese
 
 ## Source Code
 - All scripts and notebooks are available in the [code folder](https://github.com/Benfluc/Projects/tree/main/project10/codes)  
