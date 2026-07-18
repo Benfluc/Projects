@@ -14,9 +14,8 @@ Develop an end-to-end full stack movie search platform, covering the complete so
 - **Data Format:** JSON
 - **Tools:** Git, GitHub, VS Code
 
-## Development Process
-Application Development Process
-- [English Version](Development.md) - 
+## Application Development Process
+- [English Version](Development.md) 
 - [Portuguese Version](Development_pt.md)
 
 ## Project Documentation
