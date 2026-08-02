@@ -22,5 +22,6 @@ Portfolio of applied data science, machine learning, and business intelligence p
 | 8 | [Food Delivery Sales Dashboard (Simulated iFood Case)](./project8) | Interactive dashboard analyzing simulated delivery sales and customer behavior. | Power BI |
 | 9 | [Credit Risk Analysis with Fuzzy Logic](./project9) | Neuro-fuzzy (ANFIS) model for credit risk classification. | Python, ANFIS |
 | 10 | [CineStack - End-to-End Movie Search Application](./project10). | An end-to-end full stack movie search application | SQLite, Python, React |
+| 11 | [Formula 1 Analytics Dashboard](./project11). | An interactive Power BI dashboard built from a custom PostgreSQL | PostgreSQL, Docker, PowerBI |
 
 Each project folder contains its own `README.md` (English) and `README_PT.md` (Portuguese) with full context, results, source code, and images.
