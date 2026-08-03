@@ -15,7 +15,7 @@ It showcases the complete workflow, including data acquisition, PostgreSQL datab
 - **Python** - ETL automation, data cleaning, image scraping/downloading, and database generation
 - **Power BI** – Data modeling and dashboard development
 - **DAX (Data Analysis Expressions)** – Measures and calculated columns
-- 
+  
 ## Application Development Process
 - [English Version](Development.md) – step-by-step development documentation
 - [Portuguese Version](Development_PT.md) – documentação do processo de desenvolvimento
