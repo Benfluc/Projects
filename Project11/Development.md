@@ -243,10 +243,13 @@ but to create meaningful performance
 indicators for Formula 1 analysis.
 
 **DAX Measures**
-[Analytics Measures](Project11/codes/dax_measures.dax)
-[Projection Measures](Project11/codes/dax_medidas_extras.dax)
+- [Analytics Measures](Project11/codes/dax_measures.dax)
+- [Projection Measures](Project11/codes/dax_medidas_extras.dax)
 
 ## Conclusion
+
+![Mercedes Analytics](https://github.com/Benfluc/Projects/blob/main/Project11/imgs/mercedes_relat.png)
+![McLaren Analytics](https://github.com/Benfluc/Projects/blob/main/Project11/imgs/mclaren_relat.png)
 
 The F1 Analytics Platform demonstrates 
 how modern data engineering and business 
