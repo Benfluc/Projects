@@ -74,8 +74,168 @@ The process:
 
 This guarantees data consistency and simplifies future maintenance.
 
-## Project Status
+## Database Infrastructure
 
-🚧 **Under Construction**
+The project’s data layer was built on PostgreSQL 
+to provide a robust and scalable environment 
+for storing both raw and analytical data. 
 
-This project is continuously evolving. New features, improvements, and additional analyses will be added in future updates.
+To make the database setup fully automated 
+and reproducible, a collection of Python 
+scripts was developed to create the database 
+structure, load the original Kaggle dataset, 
+validate data integrity, and generate the 
+analytical views consumed by Power BI. 
+
+The ETL pipeline automatically creates 
+the required schemas, imports the CSV 
+files while respecting foreign key 
+dependencies, executes validation routines, 
+and prepares the database for analytical 
+queries.
+
+The database follows a layered 
+architecture composed of a raw layer, 
+which stores the original data with 
+minimal transformation, and a mart layer, 
+where dimensional models and analytical 
+views are created to optimize reporting 
+and business intelligence workloads. 
+
+This separation preserves the integrity 
+of the source data while providing a 
+clean and efficient structure for analysis.
+
+To simplify deployment and ensure that 
+the project can be reproduced consistently 
+across different environments, 
+PostgreSQL runs inside a Docker container. 
+This approach removes the need for manual 
+database configuration, allowing the 
+entire infrastructure to be recreated 
+with a single command. 
+
+By combining Docker, PostgreSQL, and Python 
+automation, the platform provides a 
+portable and maintainable data environment 
+that can be easily updated, shared, 
+or deployed on different machines 
+while preserving the same database 
+structure and analytical capabilities.
+
+## Images 
+
+A challenge in BI projects is handling 
+external images, especially when websites
+block direct embedding or remove URLs.
+
+To solve this, a local image ingestion 
+pipeline was created.
+
+The solution downloads images once and 
+stores them directly inside PostgreSQL as 
+Base64 Data URI strings.
+
+```text
+Wikipedia / Local Files
+          │
+          ▼
+Python Image Processor
+          │
+          ▼
+PostgreSQL
+          │
+          ▼
+Power BI
+```
+
+For constructors and cars, a local 
+image repository was created:
+
+```text
+images/
+
+├── logos/
+│
+├── Ferrari.png
+├── McLaren.png
+├── Red Bull.png
+│
+└── cars/
+    │
+    ├── Ferrari.jpg
+    ├── McLaren.jpg
+    └── Red Bull.jpg
+```
+This approach eliminates dependency 
+on external hosting.
+
+The images work completely offline.
+A Power BI limitation was considered 
+during development: Base64 images must 
+remain below 32,768 characters.
+
+Therefore, the pipeline automatically 
+optimizes images until they fit the 
+Power BI limitation.
+
+This works especially well for:
+
+* Team logos.
+* Small icons.
+
+For large images, such as car photos, 
+GitHub hosting can be used as 
+an alternative.
+
+## Power BI Data Model
+
+The visualization layer was developed 
+using Power BI.
+
+The database was modeled using a 
+Star Schema approach.
+
+
+The model separates:
+
+**Dimensions**
+
+Descriptive entities:
+
+- Drivers
+- Constructors
+- Circuits
+- Races
+- Dates
+
+**Facts**
+
+Numerical performance data:
+
+- Points
+- Positions
+- Lap times
+- Qualifying results
+- Race results
+
+## DAX Measures and KPIs
+
+Several analytical measures were 
+created using DAX.
+
+Examples:
+
+• Total wins.
+• Pole positions.
+• Championship points.
+• Average finishing position.
+• Driver performance evolution.
+• Constructor comparison.
+• Season rankings.
+
+The goal was not only to display data 
+but to create meaningful performance 
+indicators for Formula 1 analysis.
+
+
