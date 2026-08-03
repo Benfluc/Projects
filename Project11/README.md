@@ -4,8 +4,7 @@
 This project demonstrates an end-to-end Business Intelligence workflow, from collecting publicly available Formula 1 data and building a PostgreSQL database with Docker to developing interactive dashboards and visual analytics in Power BI.
 
 ## Objectives
-The objective of this project is to demonstrate the development of an end-to-end Business Intelligence solution using historical Formula 1 data. 
-It showcases the complete workflow, including data acquisition, PostgreSQL database implementation with Docker, data modeling, DAX calculations, and the creation of interactive dashboards in Power BI.
+Develop a complete Business Intelligence platform for Formula 1 historical data. The project combines Python automation, PostgreSQL, Docker, SQL, and Power BI to build an end-to-end analytics solution, from database initialization and seasonal updates to interactive dashboards and performance analysis.
 
 ## Technologies
 
