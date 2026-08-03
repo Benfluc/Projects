@@ -1,4 +1,7 @@
-# Formula 1 Analytics Dashboard: An interactive Power BI dashboard built from a custom PostgreSQL database containing Formula 1 data.
+# F1 Analytics Platform 
+## An end-to-end Business Intelligence platform for Formula 1 historical data built with Python, PostgreSQL, Docker, SQL and Power BI.
+
+<br>
 
 ## Overview
 This project demonstrates an end-to-end Business Intelligence workflow, from collecting publicly available Formula 1 data and building a PostgreSQL database with Docker to developing interactive dashboards and visual analytics in Power BI.
