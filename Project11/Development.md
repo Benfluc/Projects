@@ -73,3 +73,9 @@ The process:
 - Creates new IDs sequentially for new drivers, teams, and circuits.
 
 This guarantees data consistency and simplifies future maintenance.
+
+## Project Status
+
+🚧 **Under Construction**
+
+This project is continuously evolving. New features, improvements, and additional analyses will be added in future updates.
