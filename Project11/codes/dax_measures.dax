@@ -1,0 +1,268 @@
+// =====================================================================
+// F1 ANALYTICS — BIBLIOTECA DE MEDIDAS DAX
+// =====================================================================
+
+
+// ---------------------------------------------------------------------
+// 1. CONTAGENS BÁSICAS
+// ---------------------------------------------------------------------
+
+Corridas Disputadas = COUNTROWS(fact_results)
+
+Vitórias = CALCULATE(COUNTROWS(fact_results), fact_results[is_win] = TRUE)
+
+Pódios = CALCULATE(COUNTROWS(fact_results), fact_results[is_podium] = TRUE)
+
+Pontos = SUM(fact_results[points])
+
+Poles = CALCULATE(COUNTROWS(fact_qualifying), fact_qualifying[is_pole] = TRUE)
+
+Voltas Mais Rápidas = CALCULATE(COUNTROWS(fact_results), fact_results[is_fastest_lap] = TRUE)
+
+Voltas Completadas = SUM(fact_results[laps])
+
+Corridas nos Pontos = CALCULATE(COUNTROWS(fact_results), fact_results[is_points_finish] = TRUE)
+
+Pilotos Distintos = DISTINCTCOUNT(fact_results[driver_id])
+
+Equipes Distintas = DISTINCTCOUNT(fact_results[constructor_id])
+
+Temporadas = DISTINCTCOUNT(fact_results[season])
+
+GPs Distintos = DISTINCTCOUNT(fact_results[race_id])
+
+
+// ---------------------------------------------------------------------
+// 2. TAXAS E PERCENTUAIS
+// ---------------------------------------------------------------------
+
+Taxa de Vitória % = DIVIDE([Vitórias], [Corridas Disputadas])
+
+Taxa de Pódio % = DIVIDE([Pódios], [Corridas Disputadas])
+
+Taxa de Pontos % = DIVIDE([Corridas nos Pontos], [Corridas Disputadas])
+
+Taxa de Pole % =
+DIVIDE(
+    [Poles],
+    CALCULATE(COUNTROWS(fact_qualifying))
+)
+
+DNFs = CALCULATE(COUNTROWS(fact_results), fact_results[is_dnf] = TRUE)
+
+Taxa de DNF % = DIVIDE([DNFs], [Corridas Disputadas])
+
+Taxa de Conclusão % =
+DIVIDE(
+    CALCULATE(COUNTROWS(fact_results), fact_results[is_classified] = TRUE),
+    [Corridas Disputadas]
+)
+
+
+// ---------------------------------------------------------------------
+// 3. POSIÇÕES E DESEMPENHO
+// ---------------------------------------------------------------------
+
+Grid Médio = AVERAGE(fact_results[grid_position])
+
+Chegada Média = AVERAGE(fact_results[final_position])
+
+// Positivo = o piloto costuma ganhar posições da largada à bandeirada
+Posições Ganhas (Média) = AVERAGE(fact_results[positions_gained])
+
+Posições Ganhas (Total) = SUM(fact_results[positions_gained])
+
+Melhor Resultado = MIN(fact_results[position_order])
+
+Largadas do Pit Lane = CALCULATE(COUNTROWS(fact_results), fact_results[started_from_pit] = TRUE)
+
+Pontos por Corrida = DIVIDE([Pontos], [Corridas Disputadas])
+
+// Compara o piloto com a média geral do contexto atual
+Índice de Desempenho =
+VAR MediaPiloto  = [Chegada Média]
+VAR MediaGeral   = CALCULATE([Chegada Média], REMOVEFILTERS(dim_driver))
+RETURN DIVIDE(MediaGeral - MediaPiloto, MediaGeral)
+
+
+// ---------------------------------------------------------------------
+// 4. CLASSIFICAÇÃO (QUALIFYING)
+// ---------------------------------------------------------------------
+
+Posição Média de Largada = AVERAGE(fact_qualifying[quali_position])
+
+Melhor Volta de Quali (s) = DIVIDE(MIN(fact_qualifying[best_quali_ms]), 1000)
+
+Volta Média de Quali (s) = DIVIDE(AVERAGE(fact_qualifying[best_quali_ms]), 1000)
+
+Chegadas ao Q3 = CALCULATE(COUNTROWS(fact_qualifying), fact_qualifying[reached_q3] = TRUE)
+
+Taxa de Q3 % =
+DIVIDE([Chegadas ao Q3], CALCULATE(COUNTROWS(fact_qualifying)))
+
+// Gap para a pole, em segundos, dentro do mesmo GP
+Gap para a Pole (s) =
+VAR TempoPole =
+    CALCULATE(
+        MIN(fact_qualifying[best_quali_ms]),
+        ALLEXCEPT(fact_qualifying, fact_qualifying[race_id])
+    )
+RETURN DIVIDE(MIN(fact_qualifying[best_quali_ms]) - TempoPole, 1000)
+
+
+// ---------------------------------------------------------------------
+// 5. PIT STOPS
+// ---------------------------------------------------------------------
+
+Total de Paradas = COUNTROWS(fact_pitstops)
+
+Duração Média do Pit (s) =
+CALCULATE(
+    AVERAGE(fact_pitstops[duration_sec]),
+    fact_pitstops[is_normal_stop] = TRUE
+)
+
+Pit Mais Rápido (s) =
+CALCULATE(
+    MIN(fact_pitstops[duration_sec]),
+    fact_pitstops[is_normal_stop] = TRUE
+)
+
+Paradas por Corrida =
+DIVIDE([Total de Paradas], DISTINCTCOUNT(fact_pitstops[race_id]))
+
+// Diferença da equipe para a média do grid no mesmo período
+Pit vs Média do Grid (s) =
+VAR MediaEquipe = [Duração Média do Pit (s)]
+VAR MediaGrid   = CALCULATE([Duração Média do Pit (s)], REMOVEFILTERS(dim_constructor))
+RETURN MediaEquipe - MediaGrid
+
+
+// ---------------------------------------------------------------------
+// 6. CAMPEONATO
+// ---------------------------------------------------------------------
+
+Pontos no Campeonato =
+LASTNONBLANKVALUE(
+    fact_driver_standings[round],
+    SUM(fact_driver_standings[cumulative_points])
+)
+
+Posição no Campeonato =
+LASTNONBLANKVALUE(
+    fact_driver_standings[round],
+    MIN(fact_driver_standings[championship_position])
+)
+
+Títulos de Piloto =
+CALCULATE(
+    DISTINCTCOUNT(fact_driver_standings[season]),
+    fact_driver_standings[is_season_final] = TRUE,
+    fact_driver_standings[championship_position] = 1
+)
+
+Títulos de Construtor =
+CALCULATE(
+    DISTINCTCOUNT(fact_constructor_standings[season]),
+    fact_constructor_standings[is_season_final] = TRUE,
+    fact_constructor_standings[championship_position] = 1
+)
+
+Pontos da Equipe no Campeonato =
+LASTNONBLANKVALUE(
+    fact_constructor_standings[round],
+    SUM(fact_constructor_standings[cumulative_points])
+)
+
+// Nome do campeão do ano selecionado
+Campeão da Temporada =
+CALCULATE(
+    SELECTEDVALUE(dim_driver[driver_name]),
+    fact_driver_standings[is_season_final] = TRUE,
+    fact_driver_standings[championship_position] = 1
+)
+
+
+// ---------------------------------------------------------------------
+// 7. INTELIGÊNCIA DE TEMPO
+// ---------------------------------------------------------------------
+
+Vitórias Ano Anterior =
+CALCULATE([Vitórias], SAMEPERIODLASTYEAR(dim_date[date]))
+
+Variação de Vitórias =
+[Vitórias] - [Vitórias Ano Anterior]
+
+Variação de Vitórias % =
+DIVIDE([Vitórias] - [Vitórias Ano Anterior], [Vitórias Ano Anterior])
+
+Vitórias Acumuladas na Carreira =
+CALCULATE(
+    [Vitórias],
+    FILTER(ALL(dim_date[date]), dim_date[date] <= MAX(dim_date[date]))
+)
+
+Pontos Acumulados na Temporada =
+CALCULATE(
+    [Pontos],
+    FILTER(
+        ALLEXCEPT(fact_results, fact_results[season], fact_results[driver_id]),
+        fact_results[round] <= MAX(fact_results[round])
+    )
+)
+
+
+// ---------------------------------------------------------------------
+// 8. RANKINGS E TOP N
+// ---------------------------------------------------------------------
+
+Ranking de Vitórias =
+IF(
+    NOT ISBLANK([Vitórias]),
+    RANKX(ALLSELECTED(dim_driver[driver_name]), [Vitórias], , DESC, DENSE)
+)
+
+Ranking de Pontos =
+IF(
+    NOT ISBLANK([Pontos]),
+    RANKX(ALLSELECTED(dim_driver[driver_name]), [Pontos], , DESC, DENSE)
+)
+
+// Use como filtro visual: coloque o valor 1 para ver só o Top 10
+Top 10 Pilotos = IF([Ranking de Vitórias] <= 10, 1, 0)
+
+// Rótulo dinâmico para títulos de gráfico
+Título Dinâmico =
+VAR Piloto = SELECTEDVALUE(dim_driver[driver_name], "Todos os pilotos")
+VAR Ano    = SELECTEDVALUE(dim_race[season], "todas as temporadas")
+RETURN Piloto & " — " & Ano
+
+
+// ---------------------------------------------------------------------
+// 9. CONFIABILIDADE (usa dim_status[status_group])
+// ---------------------------------------------------------------------
+
+DNF Mecânico =
+CALCULATE(COUNTROWS(fact_results), dim_status[status_group] = "DNF - Mecânico")
+
+DNF por Incidente =
+CALCULATE(COUNTROWS(fact_results), dim_status[status_group] = "DNF - Incidente")
+
+Taxa de Falha Mecânica % = DIVIDE([DNF Mecânico], [Corridas Disputadas])
+
+Taxa de Incidente % = DIVIDE([DNF por Incidente], [Corridas Disputadas])
+
+
+// ---------------------------------------------------------------------
+// 10. RITMO DE CORRIDA (só se importar fact_lap_times)
+// ---------------------------------------------------------------------
+
+Volta Média (s) = DIVIDE(AVERAGE(fact_lap_times[lap_time_ms]), 1000)
+
+Volta Mais Rápida (s) = DIVIDE(MIN(fact_lap_times[lap_time_ms]), 1000)
+
+// Desvio padrão baixo = ritmo consistente ao longo da prova
+Consistência de Ritmo (s) = DIVIDE(STDEV.P(fact_lap_times[lap_time_ms]), 1000)
+
+Voltas Liderando =
+CALCULATE(COUNTROWS(fact_lap_times), fact_lap_times[lap_position] = 1)

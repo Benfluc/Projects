@@ -1,0 +1,161 @@
+// =====================================================================
+// F1 ANALYTICS — MEDIDAS EXTRAS PARA AS 4 PÁGINAS DO DASHBOARD
+// =====================================================================
+
+
+// =====================================================================
+// PROJEÇÃO E TENDÊNCIA (página de Analytics)
+// =====================================================================
+
+// Quantas corridas a temporada selecionada já teve
+Corridas Disputadas na Temporada =
+CALCULATE(
+    DISTINCTCOUNT(fact_results[race_id]),
+    REMOVEFILTERS(dim_driver, dim_constructor)
+)
+
+// Total de etapas previstas no calendário (inclui as que ainda não correram)
+Etapas no Calendário =
+CALCULATE(
+    MAX(dim_race[round]),
+    REMOVEFILTERS(dim_driver, dim_constructor, fact_results)
+)
+
+// Média de pontos por corrida do piloto na temporada
+Média de Pontos por Corrida =
+DIVIDE([Pontos], [Corridas Disputadas])
+
+// Projeção linear simples: pontos atuais + (média x corridas restantes).
+// ATENÇÃO: só faz sentido em temporada EM ANDAMENTO. Numa temporada
+// encerrada o resultado é igual ao total real, porque não sobram corridas.
+Projeção de Pontos ao Fim da Temporada =
+VAR Atual      = [Pontos]
+VAR Disputadas = [Corridas Disputadas]
+VAR Restantes  = [Etapas no Calendário] - [Corridas Disputadas na Temporada]
+RETURN
+IF(
+    Disputadas > 0,
+    Atual + DIVIDE(Atual, Disputadas) * MAX(Restantes, 0)
+)
+
+// Diferença entre a projeção do piloto e a do líder atual
+Gap Projetado para o Líder =
+VAR MinhaProj = [Projeção de Pontos ao Fim da Temporada]
+VAR ProjLider =
+    MAXX(
+        ALLSELECTED(dim_driver[driver_name]),
+        [Projeção de Pontos ao Fim da Temporada]
+    )
+RETURN MinhaProj - ProjLider
+
+// Média móvel de 3 corridas — suaviza o ruído de uma corrida ruim isolada
+Média Móvel 3 Corridas =
+VAR RodadaAtual = MAX(fact_results[round])
+RETURN
+CALCULATE(
+    AVERAGE(fact_results[points]),
+    FILTER(
+        ALLEXCEPT(fact_results, fact_results[season], fact_results[driver_id]),
+        fact_results[round] <= RodadaAtual
+            && fact_results[round] > RodadaAtual - 3
+    )
+)
+
+// Tendência: compara as 3 últimas corridas com a média da temporada.
+// Positivo = o piloto está em ascensão.
+Tendência de Forma =
+[Média Móvel 3 Corridas] - [Média de Pontos por Corrida]
+
+
+// =====================================================================
+// RITMO, PIT STOPS E CONFIABILIDADE
+// =====================================================================
+
+// Ranking de pit stop da equipe dentro da temporada (1 = mais rápida)
+Ranking de Pit Stop =
+IF(
+    NOT ISBLANK([Duração Média do Pit (s)]),
+    RANKX(
+        ALLSELECTED(dim_constructor[constructor_name]),
+        [Duração Média do Pit (s)],
+        ,
+        ASC,
+        DENSE
+    )
+)
+
+// Quanto a equipe perde (ou ganha) por parada contra a melhor do ano
+Gap para o Melhor Pit (s) =
+VAR MeuTempo = [Duração Média do Pit (s)]
+VAR Melhor =
+    MINX(
+        ALLSELECTED(dim_constructor[constructor_name]),
+        [Duração Média do Pit (s)]
+    )
+RETURN MeuTempo - Melhor
+
+// Custo total estimado de pit stop ao longo da temporada, em segundos
+Tempo Total Perdido em Pits (s) =
+CALCULATE(
+    SUM(fact_pitstops[duration_sec]),
+    fact_pitstops[is_normal_stop] = TRUE
+)
+
+// Confiabilidade: % de corridas terminadas sem falha mecânica
+Confiabilidade Mecânica % =
+1 - DIVIDE([DNF Mecânico], [Corridas Disputadas])
+
+// Corridas até a primeira quebra (quanto maior, mais confiável)
+Corridas entre Falhas =
+DIVIDE([Corridas Disputadas], [DNF Mecânico])
+
+// Índice combinado: pondera resultado e confiabilidade num número só
+Índice de Consistência =
+VAR TaxaChegada = [Taxa de Conclusão %]
+VAR TaxaPontos  = [Taxa de Pontos %]
+RETURN (TaxaChegada * 0.4) + (TaxaPontos * 0.6)
+
+
+// =====================================================================
+// PERFIL DO PILOTO
+// =====================================================================
+
+// Cabeçalho dinâmico do perfil
+Perfil - Cabeçalho =
+VAR Piloto = SELECTEDVALUE(dim_driver[driver_name], "Selecione um piloto")
+VAR Nac    = SELECTEDVALUE(dim_driver[nationality], "")
+VAR De     = SELECTEDVALUE(dim_driver[first_season])
+VAR Ate    = SELECTEDVALUE(dim_driver[last_season])
+RETURN
+IF(
+    ISBLANK(De),
+    Piloto,
+    Piloto & "  |  " & Nac & "  |  " & De & "–" & Ate
+)
+
+// Idade do piloto na data da corrida (funciona no eixo de tempo)
+Idade na Corrida =
+VAR Nasc = SELECTEDVALUE(dim_driver[birth_date])
+VAR Data = MAX(fact_results[race_date])
+RETURN DATEDIFF(Nasc, Data, YEAR)
+
+// Melhor posição já alcançada, formatada
+Melhor Resultado (texto) =
+VAR P = [Melhor Resultado]
+RETURN IF(ISBLANK(P), "—", FORMAT(P, "0") & "º")
+
+// Aproveitamento de pontos: quanto marcou do máximo teórico disponível
+// (25 pontos por corrida no sistema atual)
+Aproveitamento % =
+DIVIDE([Pontos], [Corridas Disputadas] * 25)
+
+// Comparação com o companheiro de equipe no mesmo ano.
+// Positivo = o piloto selecionado está melhor no grid.
+Vantagem no Grid sobre o Companheiro =
+VAR MeuGrid = [Grid Médio]
+VAR GridEquipe =
+    CALCULATE(
+        [Grid Médio],
+        ALLEXCEPT(fact_results, fact_results[constructor_id], fact_results[season])
+    )
+RETURN GridEquipe - MeuGrid
