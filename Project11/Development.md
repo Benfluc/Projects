@@ -57,7 +57,9 @@ The pipeline only updates the seasons requested by the user instead of rebuildin
 
 Example:
 
+```text
 python update_f1.py --seasons 2025 2026
+```
 
 This allows new championships to be added as Formula 1 progresses.
 
@@ -82,7 +84,8 @@ for storing both raw and analytical data.
 
 To make the database setup fully automated 
 and reproducible, a collection of Python 
-scripts was developed to create the database 
+scripts ( [Load Data Script](Project11/codes/load_data.py)
+[Update Seasons Script](Project11/codes/update_seasons.py)) was developed to create the database 
 structure, load the original Kaggle dataset, 
 validate data integrity, and generate the 
 analytical views consumed by Power BI. 
@@ -134,7 +137,7 @@ pipeline was created.
 
 The solution downloads images once and 
 stores them directly inside PostgreSQL as 
-Base64 Data URI strings.
+Base64 Data URI strings. ([load_driver_photos.py](Project11/codes/load_driver_photos.py))
 
 ```text
 Wikipedia / Local Files
@@ -177,12 +180,12 @@ remain below 32,768 characters.
 
 Therefore, the pipeline automatically 
 optimizes images until they fit the 
-Power BI limitation.
+Power BI limitation. ([load_images_from_folder.py](Project11/codes/load_images_from_folder.py))
 
 This works especially well for:
 
-* Team logos.
-* Small icons.
+ - Team logos.
+ - Small icons.
 
 For large images, such as car photos, 
 GitHub hosting can be used as 
@@ -196,6 +199,7 @@ using Power BI.
 The database was modeled using a 
 Star Schema approach.
 
+![Star Schema](https://github.com/Benfluc/Projects/blob/main/Project11/imgs/star_schema.png)
 
 The model separates:
 
@@ -238,4 +242,31 @@ The goal was not only to display data
 but to create meaningful performance 
 indicators for Formula 1 analysis.
 
+**DAX Measures**
+[Analytics Measures](Project11/codes/dax_measures.dax)
+[Projection Measures](Project11/codes/dax_medidas_extras.dax)
 
+## Conclusion
+
+The F1 Analytics Platform demonstrates 
+how modern data engineering and business 
+intelligence techniques can be integrated 
+into a complete analytical solution. 
+By combining automated ETL pipelines, 
+API integration, PostgreSQL, Docker, 
+image processing, dimensional modeling, 
+and interactive Power BI dashboards, 
+the project provides a scalable and 
+maintainable environment for exploring 
+Formula 1 data.
+
+This project reflects not only the 
+development of dashboards, but also the
+implementation of a complete end-to-end 
+data pipeline, covering data acquisition, 
+storage, transformation, modeling, and 
+visualization. As the platform continues 
+to evolve, new features and analytical 
+capabilities will be incorporated, 
+making it an increasingly comprehensive 
+resource for Formula 1 data analysis.
