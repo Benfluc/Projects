@@ -102,7 +102,7 @@ Um dos desafios em projetos de **Business Intelligence** é o gerenciamento de i
 
 Para resolver esse problema, foi desenvolvido um **pipeline** local de ingestão de imagens.
 
-A solução realiza o download das imagens apenas uma vez e as armazena diretamente no PostgreSQL como strings no formato **Base64 Data URI**. ([load_driver_photos.py](Project11/codes/load_driver_photos.py))
+A solução realiza o download das imagens apenas uma vez e as armazena diretamente no PostgreSQL como strings no formato **Base64 Data URI**. ([load_driver_photos.py](codes/load_driver_photos.py))
 
 ```text
 Wikipedia / Local Files
@@ -141,7 +141,7 @@ As imagens funcionam completamente offline.
 
 Durante o desenvolvimento, uma limitação do Power BI foi levada em consideração: imagens em Base64 devem permanecer abaixo de **32.768 caracteres**.
 
-Por isso, o pipeline otimiza automaticamente as imagens até que elas atendam a essa restrição do Power BI. ([load_images_from_folder.py](Project11/codes/load_images_from_folder.py))
+Por isso, o pipeline otimiza automaticamente as imagens até que elas atendam a essa restrição do Power BI. ([load_images_from_folder.py](codes/load_images_from_folder.py))
 
 Essa abordagem funciona especialmente bem para:
 
@@ -198,8 +198,8 @@ O objetivo não foi apenas apresentar os dados, mas criar indicadores de desempe
 
 **DAX Measures**
 
-- [Analytics Measures](Project11/codes/dax_measures.dax)
-- [Projection Measures](Project11/codes/dax_medidas_extras.dax)
+- [Analytics Measures](codes/dax_measures.dax)
+- [Projection Measures](codes/dax_medidas_extras.dax)
 
 ## Conclusão
 
