@@ -82,7 +82,7 @@ Essa abordagem garante a consistência dos dados e simplifica futuras manutenç�
 
 A camada de dados do projeto foi construída sobre o PostgreSQL para fornecer um ambiente robusto e escalável para armazenar tanto dados brutos quanto dados analíticos.
 
-Para tornar a configuração do banco de dados totalmente automatizada e reproduzível, foi desenvolvido um conjunto de scripts em Python ([Load Data Script](./Project11/codes/load_data.py) e [Update Seasons Script](./Project11/codes/update_seasons.py)) responsável por criar toda a estrutura do banco, carregar o dataset original do Kaggle, validar a integridade dos dados e gerar as **analytical views** consumidas pelo Power BI.
+Para tornar a configuração do banco de dados totalmente automatizada e reproduzível, foi desenvolvido um conjunto de scripts em Python ([Load Data Script](./codes/load_data.py) e [Update Seasons Script](codes/update_seasons.py)) responsável por criar toda a estrutura do banco, carregar o dataset original do Kaggle, validar a integridade dos dados e gerar as **analytical views** consumidas pelo Power BI.
 
 O pipeline de ETL cria automaticamente os schemas necessários, importa os arquivos CSV respeitando as dependências de **foreign keys**, executa rotinas de validação e prepara o banco para consultas analíticas.
 
