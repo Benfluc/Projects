@@ -84,8 +84,8 @@ for storing both raw and analytical data.
 
 To make the database setup fully automated 
 and reproducible, a collection of Python 
-scripts ( [Load Data Script](Project11/codes/load_data.py)
-[Update Seasons Script](Project11/codes/update_seasons.py)) was developed to create the database 
+scripts ( [Load Data Script](codes/load_data.py)
+[Update Seasons Script](codes/update_seasons.py)) was developed to create the database 
 structure, load the original Kaggle dataset, 
 validate data integrity, and generate the 
 analytical views consumed by Power BI. 
@@ -137,7 +137,7 @@ pipeline was created.
 
 The solution downloads images once and 
 stores them directly inside PostgreSQL as 
-Base64 Data URI strings. ([load_driver_photos.py](Project11/codes/load_driver_photos.py))
+Base64 Data URI strings. ([load_driver_photos.py](codes/load_driver_photos.py))
 
 ```text
 Wikipedia / Local Files
@@ -180,7 +180,7 @@ remain below 32,768 characters.
 
 Therefore, the pipeline automatically 
 optimizes images until they fit the 
-Power BI limitation. ([load_images_from_folder.py](Project11/codes/load_images_from_folder.py))
+Power BI limitation. ([load_images_from_folder.py](codes/load_images_from_folder.py))
 
 This works especially well for:
 
@@ -243,8 +243,8 @@ but to create meaningful performance
 indicators for Formula 1 analysis.
 
 **DAX Measures**
-- [Analytics Measures](Project11/codes/dax_measures.dax)
-- [Projection Measures](Project11/codes/dax_medidas_extras.dax)
+- [Analytics Measures](codes/dax_measures.dax)
+- [Projection Measures](codes/dax_medidas_extras.dax)
 
 ## Conclusion
 
