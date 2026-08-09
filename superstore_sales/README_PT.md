@@ -20,8 +20,8 @@ O projeto simula um fluxo real de Business Intelligence, desde a extração e li
 - [Versão em Português](README_PT.md) – este documento.
 
 ## Storytelling Completo do Projeto
-- [Versão em Inglês](https://github.com/Benfluc/Projects/blob/main/project6/article_en.md)
-- [Versão em Português](https://github.com/Benfluc/Projects/blob/main/project6/article_pt.md)
+- [Versão em Inglês](https://github.com/Benfluc/Projects/blob/main/superstore_sales/article_en.md)
+- [Versão em Português](https://github.com/Benfluc/Projects/blob/main/superstore_sales/article_pt.md)
 
 ## Fontes
-- O conjunto de dados utilizado, assim como o arquivo do Power BI, podem ser encontrados e baixados na pasta [sources](https://github.com/Benfluc/Projects/tree/main/project6/sources)  
+- O conjunto de dados utilizado, assim como o arquivo do Power BI, podem ser encontrados e baixados na pasta [sources](https://github.com/Benfluc/Projects/tree/main/superstore_sales/sources)  
