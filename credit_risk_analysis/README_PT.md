@@ -33,7 +33,7 @@ Todos os resultados e detalhes podem ser encontrados [aqui](results_pt.md)
 - [Versão em Português](results_pt.md)
 
 ## Código Fonte
-- Todos os scripts e notebooks estão disponíveis na ['códigos'](https://github.com/Benfluc/Projects/tree/main/project9/codes)  
+- Todos os scripts e notebooks estão disponíveis na ['códigos'](https://github.com/Benfluc/Projects/tree/main/credit_risk_analysis/codes)  
 
 ## Imagens e Visualizações
-- Gráficos, figuras e outras imagens do projeto podem ser encontrados na pasta [imagens](https://github.com/Benfluc/Projects/tree/main/project9/imgs)
+- Gráficos, figuras e outras imagens do projeto podem ser encontrados na pasta [imagens](https://github.com/Benfluc/Projects/tree/main/credit_risk_analysis/imgs)
