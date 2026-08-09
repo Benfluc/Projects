@@ -11,14 +11,14 @@ The naive fix is `split("-")`. It works fine for genres, because TMDB's genre li
 It quietly breaks for anything else, because the same character that separates list items also shows up inside real names: actor surnames like Harper-Jones, studio names like Metro-Goldwyn-Mayer. 
 Splitting on `-` turns one person into two fake ones. This wasn't theoretical — it showed up in the very first rows of the real file (two different actors named Harper-Jones in the same movie's cast list, both silently corrupted by a naive split).
 
-![Names that would break when using '-' as split](https://github.com/Benfluc/Projects/blob/main/project10/imgs/affected_names.png)
+![Names that would break when using '-' as split](https://github.com/Benfluc/Projects/blob/main/cinestack/imgs/affected_names.png)
 
 That single observation drove the database design: don't force a fragile split on data that can't support it. Instead:
 Genres — a closed, hyphen-safe vocabulary — became a proper normalized table with a many-to-many relationship to movies.
 Recommendations — a list of numeric movie IDs, also hyphen-safe since digits never collide with the separator — became a proper self-referencing relationship table.
 Cast, production companies, and keywords stayed as raw text columns on the movie itself, searched with full-text search instead of being forced into a broken relational shape. Substring search doesn't care whether a name was technically "split correctly" — it just needs the text to be there.
 
-A companion Python script [`normalizar_coluna`](https://github.com/Benfluc/Projects/blob/main/project10/codes/normalizar_coluna.py) was also built to explore fixing the ambiguity properly: a heuristic that flags single-word fragments in a cast list as likely broken names, plus a script that re-fetches the correct cast from the TMDB API only for the flagged, suspicious rows — avoiding a full re-fetch of 770,000 movies.
+A companion Python script [`normalizar_coluna`](https://github.com/Benfluc/Projects/blob/main/cinestack/codes/normalizar_coluna.py) was also built to explore fixing the ambiguity properly: a heuristic that flags single-word fragments in a cast list as likely broken names, plus a script that re-fetches the correct cast from the TMDB API only for the flagged, suspicious rows — avoiding a full re-fetch of 770,000 movies.
 
 
 ## Building the database (SQLite, via DB Browser)
@@ -27,8 +27,8 @@ Getting there took a few real debugging rounds, which turned out to be good less
 A `UNIQUE constraint failed` on `id` — traced back to genuinely duplicate rows in the source CSV (about 107,000 of them), not corruption. Confirmed with a simple `COUNT(*)` vs `COUNT(DISTINCT id)` check, then handled with `INSERT OR IGNORE`.
 A `FOREIGN KEY constraint failed` that `INSERT OR IGNORE` did not fix — because SQLite's conflict resolution clauses don't cover foreign key violations, only `UNIQUE`/`PRIMARY KEY`/`NOT NULL`/`CHECK`. The real fix was pre-filtering rows against the parent table before inserting, not relying on a conflict clause to bail out after the fact.
 
-- [Database normalization and ER table creation](https://github.com/Benfluc/Projects/blob/main/project10/codes/01_schema_e_normalizacao.sql)
-- [Sample queries](https://github.com/Benfluc/Projects/blob/main/project10/codes/02_consultas_exemplo.sql)
+- [Database normalization and ER table creation](https://github.com/Benfluc/Projects/blob/main/cinestack/codes/01_schema_e_normalizacao.sql)
+- [Sample queries](https://github.com/Benfluc/Projects/blob/main/cinestack/codes/02_consultas_exemplo.sql)
 
 
 ## The backend: Express, and a native-dependency detour
