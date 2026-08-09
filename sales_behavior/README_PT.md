@@ -20,15 +20,15 @@ revelam correlações entre eficiência operacional e lucratividade, destacando 
 - [Portuguese Version](README_PT.md) – esse documento.
 
 ## Artigo Completo
-- [Versão em Inglês](https://github.com/Benfluc/Projects/blob/main/project5/article_en.md)
-- [Versão em Português](https://github.com/Benfluc/Projects/blob/main/project5/article_pt.md)
+- [Versão em Inglês](https://github.com/Benfluc/Projects/blob/main/sales_behavior/article_en.md)
+- [Versão em Português](https://github.com/Benfluc/Projects/blob/main/sales_behavior/article_pt.md)
 
 ## Resultados e Recomendações
 - [Versão em Inglês](results.md)
 - [Versão em Português](results_pt.md)
 
 ## Código Fonte:
-- Todos os códigos podem ser acessados na [pasta de códigos](https://github.com/Benfluc/Projects/tree/main/project5/codes)  
+- Todos os códigos podem ser acessados na [pasta de códigos](https://github.com/Benfluc/Projects/tree/main/sales_behavior/codes)  
 
 ## Imagens e Visualização:
-- Tables, gráficos e imagens podem ser visualizados na [pasta de imagens](https://github.com/Benfluc/Projects/tree/main/project5/imgs)
+- Tables, gráficos e imagens podem ser visualizados na [pasta de imagens](https://github.com/Benfluc/Projects/tree/main/sales_behavior/imgs)
