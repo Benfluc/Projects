@@ -14,11 +14,11 @@ This project applies time series forecasting techniques to predict monthly Arabi
 - [Portuguese Version](README_PT.md) – overview and explanation in Portuguese
 
 ## Full Article
-- [English Version](https://github.com/Benfluc/Projects/blob/main/project1/Article%20EN.pdf)
-- [Portuguese Version](https://github.com/Benfluc/Projects/blob/main/project1/Artigo_PT.pdf)
+- [English Version](https://github.com/Benfluc/Projects/blob/main/coffee_export/Article%20EN.pdf)
+- [Portuguese Version](https://github.com/Benfluc/Projects/blob/main/coffee_export/Artigo_PT.pdf)
 
 ## Source Code
-- All scripts and notebooks are available in the [code folder](https://github.com/Benfluc/Projects/tree/main/project1/codes)  
+- All scripts and notebooks are available in the [code folder](https://github.com/Benfluc/Projects/tree/main/coffee_export/codes)  
 
 ## Images and Visualizations
-- Charts, graphs, and other project images can be found in the [images folder](https://github.com/Benfluc/Projects/tree/main/project1/imgs)
+- Charts, graphs, and other project images can be found in the [images folder](https://github.com/Benfluc/Projects/tree/main/coffee_export/imgs)
