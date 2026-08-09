@@ -3,7 +3,7 @@
 ## Introdução
 Esse texto traz a explicação do código e de como foi feito e executado. Caso você queira, você pode checar logo a parte de resultados obtidos e sugestões aos gestores [aqui](results_pt.md).
 
-O dataset usado nesse estudo foi adquirido no site Kaggle.com e pode ser visualizado na [pasta de códigos](https://github.com/Benfluc/Projects/tree/main/project5/codes).
+O dataset usado nesse estudo foi adquirido no site Kaggle.com e pode ser visualizado na [pasta de códigos](https://github.com/Benfluc/Projects/tree/main/sales_behavior/codes).
 Os dados correspondem a 9994 iformações de vendas de uma loja, com informações como a data da compra, data do envio, tipo de produto, categoria, lucro, etc.
 O objetivo desse estudo foi realizar uma análise exploratória de dados (EDA) afim de identificar pontos de melhoria e oportunidades para os gestores da loja.
 
@@ -190,7 +190,7 @@ for i in range(corr.shape[0]):
         plt.text(j, i, f"{corr.iloc[i,j]:.2f}", ha="center", va="center")
 save_plot(fig, "correlation_matrix.png")
 ```
-Todas as tabelas e gráficos gerados podem ser visualizados [aqui](https://github.com/Benfluc/Projects/tree/main/project5/imgs).
+Todas as tabelas e gráficos gerados podem ser visualizados [aqui](https://github.com/Benfluc/Projects/tree/main/sales_behavior/imgs).
 
 Com base em todas essas informações, foi possível extrair insights valiosos que revelam pontos de melhoria e oportunidades de crescimento para a empresa, como o aumento do lucro e a otimização da logística 
 de transporte de pedidos, reduzindo prejuízos causados por atrasos. Você pode checar tudo isso aqui [resultados e recomendações](results_pt.md).
