@@ -1,6 +1,6 @@
 # Methodology and Results
 
-To access the code and datasets used in this project, click [here](https://github.com/Benfluc/Projects/tree/main/project9/codes)
+To access the code and datasets used in this project, click [here](https://github.com/Benfluc/Projects/tree/main/credit_risk_analysis/codes)
 
 ## 1. The Problem and the Objective
 In this project, a Credit Scoring system was developed using the Give Me Some Credit dataset. The main objective was to predict the probability that a client will experience financial distress within the next two years. 
@@ -29,7 +29,7 @@ For each credit applicant, the model estimated a probability of default within a
 The key advantage of the Neuro-Fuzzy architecture lies in its interpretability. Unlike "black-box" models such as LSTM (Long Short-Term Memory) or XGBoost, fuzzy logic allows auditing of classification criteria through the 
 analysis of membership functions and inference rules. To quantify the influence of features on the network’s decision, the Spearman correlation coefficient was applied, identifying the main risk drivers of the model:
 
-![](https://github.com/Benfluc/Projects/blob/main/project9/imgs/mapa_corr.png)
+![](https://github.com/Benfluc/Projects/blob/main/credit_risk_analysis/imgs/mapa_corr.png)
 
 - Age: Showed a significant inverse correlation, indicating that demographic maturity is associated with lower-risk profiles.
 - Monthly Income: Demonstrated that income-generating capacity acts as a mitigating factor for the probability of default.
@@ -52,7 +52,7 @@ Below, we detail the average risk segmented by categories, demonstrating the sta
 
 Beyond the demographic factor, the network demonstrated refined sensitivity to active financial behavior, as observed in the relationship between the Utilization of Unsecured Credit Lines and the Fuzzy Probability.
 
-![](https://github.com/Benfluc/Projects/blob/main/project9/imgs/graph_credit_risk.png)
+![](https://github.com/Benfluc/Projects/blob/main/credit_risk_analysis/imgs/graph_credit_risk.png)
 
 The scatter plot reveals that the model does not apply a binary penalty, but rather a graded risk scale. There is a clear concentration of high-risk profiles as utilization approaches the threshold of 1.0 (100% of the available limit). This behavior highlights the ability of the Neuro-Fuzzy system to map zones of uncertainty: while users with low utilization exhibit a wider dispersion of risk (influenced by other variables such as historical delays), the exhaustion of credit lines acts as an immediate warning trigger for the network, raising the baseline probability of default.
 
