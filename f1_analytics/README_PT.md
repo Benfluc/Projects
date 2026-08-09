@@ -32,8 +32,8 @@ Desenvolver uma plataforma completa de Business Intelligence para dados históri
 
 ## Código-Fonte
 
-- Todos os scripts e notebooks estão disponíveis na [pasta de código](https://github.com/Benfluc/Projects/tree/main/project11/codes)
+- Todos os scripts e notebooks estão disponíveis na [pasta de código](https://github.com/Benfluc/Projects/tree/main/f1_analytics/codes)
 
 ## Imagens e Visualizações
 
-- Gráficos, dashboards e demais imagens do projeto podem ser encontrados na [pasta de imagens](https://github.com/Benfluc/Projects/tree/main/project11/imgs)
+- Gráficos, dashboards e demais imagens do projeto podem ser encontrados na [pasta de imagens](https://github.com/Benfluc/Projects/tree/main/f1_analytics/imgs)
