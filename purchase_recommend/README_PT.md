@@ -16,8 +16,8 @@ O projeto utiliza técnicas de **análise de dados e aprendizado de máquina** p
 - [Versão em Português](README_PT.md) – este documento
 
 ## Artigo Completo
-- [Versão em Inglês](https://github.com/Benfluc/Projects/blob/main/project4/article_en.md)  
-- [Versão em Português](https://github.com/Benfluc/Projects/blob/main/project4/article_pt.md)
+- [Versão em Inglês](https://github.com/Benfluc/Projects/blob/main/purchase_recommend/article_en.md)  
+- [Versão em Português](https://github.com/Benfluc/Projects/blob/main/purchase_recommend/article_pt.md)
 
 ## Código-Fonte
-- O notebook deste projeto está disponível na [pasta de código](https://github.com/Benfluc/Projects/tree/main/project4/code)
+- O notebook deste projeto está disponível na [pasta de código](https://github.com/Benfluc/Projects/tree/main/purchase_recommend/code)
