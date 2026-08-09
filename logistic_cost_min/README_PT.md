@@ -13,8 +13,8 @@ Esse processo evidencia a aplicação prática de técnicas de pesquisa operacio
 - [Versão em Português](README_PT.md) – este documento  
 
 ## Artigo Completo
-- [Versão em Inglês](https://github.com/Benfluc/Projects/blob/main/project2/text_en.md)  
-- [Versão em Português](https://github.com/Benfluc/Projects/blob/main/project2/text_pt.md)  
+- [Versão em Inglês](https://github.com/Benfluc/Projects/blob/main/logistic_cost_min/text_en.md)  
+- [Versão em Português](https://github.com/Benfluc/Projects/blob/main/logistic_cost_min/text_pt.md)  
 
 ## Código-Fonte
-- O código desse projeto está disponível na [pasta de códigos](https://github.com/Benfluc/Projects/tree/main/project2/code)  
+- O código desse projeto está disponível na [pasta de códigos](https://github.com/Benfluc/Projects/tree/main/logistic_cost_min/code)  
