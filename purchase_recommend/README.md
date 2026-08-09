@@ -16,8 +16,8 @@ The project leverages data analysis and machine learning techniques to turn tran
 - [Portuguese Version](README_PT.md) – overview and explanation in Portuguese
 
 ## Full Article
-- [English Version](https://github.com/Benfluc/Projects/blob/main/project4/article_en.md) 
-- [Portuguese Version](https://github.com/Benfluc/Projects/blob/main/project4/article_pt.md)
+- [English Version](https://github.com/Benfluc/Projects/blob/main/purchase_recommend/article_en.md) 
+- [Portuguese Version](https://github.com/Benfluc/Projects/blob/main/purchase_recommend/article_pt.md)
 
 ## Source Code
-- The notebook of this project is available in the [code folder](https://github.com/Benfluc/Projects/tree/main/project4/code)
+- The notebook of this project is available in the [code folder](https://github.com/Benfluc/Projects/tree/main/purchase_recommend/code)
