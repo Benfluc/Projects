@@ -21,11 +21,11 @@ can support data-driven decision-making.
 - [Portuguese Version](README_PT.md) – overview and explanation in Portuguese
 
 ## Full Project Storytelling
-- [English Version](https://github.com/Benfluc/Projects/blob/main/project6/article_en.md)
-- [Portuguese Version](https://github.com/Benfluc/Projects/blob/main/project6/article_pt.md)
+- [English Version](https://github.com/Benfluc/Projects/blob/main/superstore_sales/article_en.md)
+- [Portuguese Version](https://github.com/Benfluc/Projects/blob/main/superstore_sales/article_pt.md)
 
 ## Sources
-- The dataset used, as well as the Power BI file, can be found and downloaded in the [sources folder](https://github.com/Benfluc/Projects/tree/main/project6/sources)  
+- The dataset used, as well as the Power BI file, can be found and downloaded in the [sources folder](https://github.com/Benfluc/Projects/tree/main/superstore_sales/sources)  
 
 
 
