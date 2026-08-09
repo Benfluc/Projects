@@ -33,7 +33,7 @@ To predict and classify clients based on their probability of default using a da
 - [Portuguese version](results_pt.md)
 
 ## Source Code
-- All scripts and notebooks are available in the [code folder](https://github.com/Benfluc/Projects/tree/main/project9/codes)  
+- All scripts and notebooks are available in the [code folder](https://github.com/Benfluc/Projects/tree/main/credit_risk_analysis/codes)  
 
 ## Images and Visualizations
-- Charts, graphs, and other project images can be found in the [images folder](https://github.com/Benfluc/Projects/tree/main/project9/imgs)
+- Charts, graphs, and other project images can be found in the [images folder](https://github.com/Benfluc/Projects/tree/main/credit_risk_analysis/imgs)
