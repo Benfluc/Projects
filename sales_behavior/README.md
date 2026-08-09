@@ -17,15 +17,15 @@ The study provides a data-driven understanding of sales behavior, supporting bet
 - [Portuguese Version](README_PT.md) – overview and explanation in Portuguese
 
 ## Full Article
-- [English Version](https://github.com/Benfluc/Projects/blob/main/project5/article_en.md)
-- [Portuguese Version](https://github.com/Benfluc/Projects/blob/main/project5/article_pt.md)
+- [English Version](https://github.com/Benfluc/Projects/blob/main/sales_behavior/article_en.md)
+- [Portuguese Version](https://github.com/Benfluc/Projects/blob/main/sales_behavior/article_pt.md)
 
 ## Results and recommendations
 - [English version](results.md)
 - [Portugues version](results_pt.md)
 
 ## Source Code
-- All scripts and notebooks are available in the [code folder](https://github.com/Benfluc/Projects/tree/main/project5/codes)  
+- All scripts and notebooks are available in the [code folder](https://github.com/Benfluc/Projects/tree/main/sales_behavior/codes)  
 
 ## Images and Visualizations
-- Charts, graphs, and other project images can be found in the [images folder](https://github.com/Benfluc/Projects/tree/main/project5/imgs)
+- Charts, graphs, and other project images can be found in the [images folder](https://github.com/Benfluc/Projects/tree/main/sales_behavior/imgs)
