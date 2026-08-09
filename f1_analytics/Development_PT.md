@@ -1,6 +1,6 @@
 # Desenvolvimento da Plataforma de Análise da Fórmula 1
 
-![Kimi Antonelli Standings](https://raw.githubusercontent.com/Benfluc/Projects/refs/heads/main/Project11/imgs/kimi_relat.png)
+![Kimi Antonelli Standings](https://raw.githubusercontent.com/Benfluc/Projects/refs/heads/main/f1_analytics/imgs/kimi_relat.png)
 
 ## Overview
 
@@ -156,7 +156,7 @@ A camada de visualização foi desenvolvida utilizando Power BI.
 
 O banco de dados foi modelado seguindo a abordagem **Star Schema**.
 
-![Star Schema](https://github.com/Benfluc/Projects/blob/main/Project11/imgs/star_schema.png)
+![Star Schema](https://github.com/Benfluc/Projects/blob/main/f1_analytics/imgs/star_schema.png)
 
 O modelo separa:
 
@@ -203,8 +203,8 @@ O objetivo não foi apenas apresentar os dados, mas criar indicadores de desempe
 
 ## Conclusão
 
-![Mercedes Analytics](https://github.com/Benfluc/Projects/blob/main/Project11/imgs/mercedes_relat.png)
-![McLaren Analytics](https://github.com/Benfluc/Projects/blob/main/Project11/imgs/mclaren_relat.png)
+![Mercedes Analytics](https://github.com/Benfluc/Projects/blob/main/f1_analytics/imgs/mercedes_relat.png)
+![McLaren Analytics](https://github.com/Benfluc/Projects/blob/main/f1_analytics/imgs/mclaren_relat.png)
 
 A F1 Analytics Platform demonstra como técnicas modernas de **Data Engineering** e **Business Intelligence** podem ser integradas em uma solução analítica completa. Ao combinar pipelines automatizados de ETL, integração com APIs, PostgreSQL, Docker, processamento de imagens, modelagem dimensional e dashboards interativos no Power BI, o projeto fornece um ambiente escalável, portátil e de fácil manutenção para análise de dados da Fórmula 1.
 
