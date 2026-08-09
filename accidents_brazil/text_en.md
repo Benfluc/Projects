@@ -258,15 +258,15 @@ plot_topn(top_cnaes, "Top 10 - CNAE com Mais Acidentes", "Número de acidentes",
 ```
 **Output:**
 
-![Top Causadores de Acidentes](https://github.com/Benfluc/Projects/blob/main/project3/imgs/top10_agentes.png)
+![Top Causadores de Acidentes](https://github.com/Benfluc/Projects/blob/main/accidents_brazil/imgs/top10_agentes.png)
 
-![Municípios com mais Acidentes](https://github.com/Benfluc/Projects/blob/main/project3/imgs/top10_municipios.png)
+![Municípios com mais Acidentes](https://github.com/Benfluc/Projects/blob/main/accidents_brazil/imgs/top10_municipios.png)
 
-![Agentes Acidentes Fatais](https://github.com/Benfluc/Projects/blob/main/project3/imgs/top10_agentes_fatais.png)
+![Agentes Acidentes Fatais](https://github.com/Benfluc/Projects/blob/main/accidents_brazil/imgs/top10_agentes_fatais.png)
 
-![CBO com mais Acidentes](https://github.com/Benfluc/Projects/blob/main/project3/imgs/top10_cbos.png)
+![CBO com mais Acidentes](https://github.com/Benfluc/Projects/blob/main/accidents_brazil/imgs/top10_cbos.png)
 
-![CNAE com mais Acidentes](https://github.com/Benfluc/Projects/blob/main/project3/imgs/top10_cnaes.png)
+![CNAE com mais Acidentes](https://github.com/Benfluc/Projects/blob/main/accidents_brazil/imgs/top10_cnaes.png)
 
 Next, we analyzed the accidents comparatively on a monthly basis.
 
@@ -298,7 +298,7 @@ if "data_acidente_parsed" in df.columns and not df["data_acidente_parsed"].isna(
         plt.close()
 ```
 **Output:**
-![Acidentes por Mês](https://github.com/Benfluc/Projects/blob/main/project3/imgs/acidentes_por_mes.png)
+![Acidentes por Mês](https://github.com/Benfluc/Projects/blob/main/accidents_brazil/imgs/acidentes_por_mes.png)
 
 ## 5. DEMOGRAPHIC PROFILE
 
@@ -344,9 +344,9 @@ if "idade_anos" in df.columns:
     plt.close()
 ```
 **Output:**
-![Acidentes por Sexo](https://github.com/Benfluc/Projects/blob/main/project3/imgs/Acidentes%20por%20Sexo.png)
-![Acidentes por Idade](https://github.com/Benfluc/Projects/blob/main/project3/imgs/Acidentes%20por%20idade.png)
-![Idade vs. Óbito](https://github.com/Benfluc/Projects/blob/main/project3/imgs/Idade%20vs%20%C3%93bito.png)
+![Acidentes por Sexo](https://github.com/Benfluc/Projects/blob/main/accidents_brazil/imgs/Acidentes%20por%20Sexo.png)
+![Acidentes por Idade](https://github.com/Benfluc/Projects/blob/main/accidents_brazil/imgs/Acidentes%20por%20idade.png)
+![Idade vs. Óbito](https://github.com/Benfluc/Projects/blob/main/accidents_brazil/imgs/Idade%20vs%20%C3%93bito.png)
 
 ## **6. GENERAL CONCLUSIONS AND INSIGHTS**
 
