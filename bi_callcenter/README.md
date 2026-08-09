@@ -1,3 +1,5 @@
+# Call Center Business Intelligence and Performance Analytics Platform
+
 ## 1. Project Context
 
 This project simulates the operation of a large-scale call center focused on collecting overdue payments, characterized by a high volume of daily interactions and clearly defined operational and commercial performance goals.
@@ -55,8 +57,8 @@ At the end of the project, the solution enabled a comprehensive view of the oper
 
 ## 7. Documentation
 
- - To learn more about the work methodology [click here](https://github.com/Benfluc/Projects/blob/main/project7/methodology.md)
+ - To learn more about the work methodology [click here](https://github.com/Benfluc/Projects/blob/main/bi_callcenter/methodology.md)
 
- - To view the full results [click here](https://github.com/Benfluc/Projects/blob/main/project7/results.md)
+ - To view the full results [click here](https://github.com/Benfluc/Projects/blob/main/bi_callcenter/results.md)
 
- - All project documents and files can be accessed in the ['sources'](https://github.com/Benfluc/Projects/tree/main/project7/sources) folder.
+ - All project documents and files can be accessed in the ['sources'](https://github.com/Benfluc/Projects/tree/main/bi_callcenter/sources) folder.
