@@ -1,3 +1,5 @@
+# Plataforma de Business Intelligence e Analytics para Gestão de Performance em Call Center
+
 ## 1. Contexto do Projeto
 
 Este projeto simula a operação de um call center de grande porte, voltado à cobrança de valores em atraso, caracterizado por um alto volume de interações diárias e por metas bem definidas de desempenho operacional e comercial.
@@ -55,8 +57,8 @@ dashboards orientados à tomada de decisão, simulando um ambiente corporativo r
 
 ## 7. Documentação
 
- - Para saber mais sobre a metodologia do trabalho [clique aqui](https://github.com/Benfluc/Projects/blob/main/project7/metodologia.md)
+ - Para saber mais sobre a metodologia do trabalho [clique aqui](https://github.com/Benfluc/Projects/blob/main/bi_callcenter/metodologia.md)
 
- - Para visualizar os resultados completos [clique aqui](https://github.com/Benfluc/Projects/blob/main/project7/resultados.md)
+ - Para visualizar os resultados completos [clique aqui](https://github.com/Benfluc/Projects/blob/main/bi_callcenter/resultados.md)
 
- - Todos os documentos e arquivos do projeto podem ser acessados na pasta ['sources'](https://github.com/Benfluc/Projects/tree/main/project7/sources)
+ - Todos os documentos e arquivos do projeto podem ser acessados na pasta ['sources'](https://github.com/Benfluc/Projects/tree/main/bi_callcenter/sources)
