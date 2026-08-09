@@ -28,8 +28,8 @@ Desenvolver uma plataforma full stack de consulta de filmes, abrangendo todo o c
 
 ## Código-fonte
 
-- Todos os scripts e arquivos do projeto estão disponíveis na pasta [code](https://github.com/Benfluc/Projects/tree/main/project10/codes).
+- Todos os scripts e arquivos do projeto estão disponíveis na pasta [code](https://github.com/Benfluc/Projects/tree/main/cinestack/codes).
 
 ## Imagens e Visualizações
 
-- Capturas de tela, diagramas e outras imagens do projeto podem ser encontrados na pasta [images](https://github.com/Benfluc/Projects/tree/main/project10/imgs).
+- Capturas de tela, diagramas e outras imagens do projeto podem ser encontrados na pasta [images](https://github.com/Benfluc/Projects/tree/main/cinestack/imgs).
