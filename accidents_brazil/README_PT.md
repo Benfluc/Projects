@@ -15,8 +15,8 @@ Os resultados ressaltam a importância de abordagens orientadas por dados para a
 - [Versão em Português](README_PT.md) – este documento
 
 ## Artigo Completo
-- [Versão em Inglês](https://github.com/Benfluc/Projects/blob/main/project3/text_en.md)  
-- [Versão em Português](https://github.com/Benfluc/Projects/blob/main/project3/text_pt.md)  
+- [Versão em Inglês](https://github.com/Benfluc/Projects/blob/main/accidents_brazil/text_en.md)  
+- [Versão em Português](https://github.com/Benfluc/Projects/blob/main/accidents_brazil/text_pt.md)  
 
 ## Código-Fonte
-- O notebook deste projeto está disponível na [pasta de código](https://github.com/Benfluc/Projects/tree/main/project3/code)
+- O notebook deste projeto está disponível na [pasta de código](https://github.com/Benfluc/Projects/tree/main/accidents_brazil/code)
