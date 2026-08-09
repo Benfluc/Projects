@@ -8,14 +8,14 @@ A fonte era um export no formato TMDB, [`movies.csv`](https://www.kaggle.com/dat
 
 A solução ingênua é `split("-")`. Ela funciona bem para gêneros, porque a lista de gêneros do TMDB é um vocabulário pequeno e fechado, e nenhum dos ~19 nomes tem hífen. Mas ela quebra silenciosamente em qualquer outra coluna, porque o mesmo caractere que separa itens da lista também aparece dentro de nomes reais: sobrenomes de ator como Harper-Jones, nomes de estúdio como Metro-Goldwyn-Mayer. Fazer o split por `-` transforma uma pessoa em duas pessoas falsas. Isso não era teórico — apareceu já nas primeiras linhas do arquivo real (dois atores diferentes de sobrenome Harper-Jones no elenco do mesmo filme, os dois corrompidos silenciosamente por um split ingênuo).
 
-![Nomes que 'quebrariam' usando '-' como split](https://github.com/Benfluc/Projects/blob/main/project10/imgs/affected_names.png)
+![Nomes que 'quebrariam' usando '-' como split](https://github.com/Benfluc/Projects/blob/main/cinestack/imgs/affected_names.png)
 
 Essa única observação guiou o design do banco: não forçar um split frágil em dados que não suportam isso. Em vez disso:
 Gêneros — um vocabulário fechado e seguro contra hífen — viraram uma tabela normalizada de verdade, com relação muitos-para-muitos com os filmes.
 Recomendações — uma lista de IDs numéricos de filme, também segura contra hífen já que dígito nunca colide com o separador — virou uma tabela de relacionamento auto-referenciada de verdade.
 Elenco, produtoras e palavras-chave continuaram como colunas de texto puro no próprio filme, buscadas com full-text search em vez de forçadas num formato relacional quebrado. Busca por substring não se importa se um nome foi "separado corretamente" — só precisa que o texto esteja lá.
 
-Um script Python complementar [`normalizar_coluna`](https://github.com/Benfluc/Projects/blob/main/project10/codes/normalizar_coluna.py) também foi construído pra explorar uma correção de verdade da ambiguidade: uma heurística que sinaliza fragmentos de uma palavra só numa lista de elenco como prováveis nomes quebrados, mais um script que busca o elenco correto na API do TMDB só para as linhas sinalizadas como suspeitas — evitando ter que rebuscar 770 mil filmes inteiros.
+Um script Python complementar [`normalizar_coluna`](https://github.com/Benfluc/Projects/blob/main/cinestack/codes/normalizar_coluna.py) também foi construído pra explorar uma correção de verdade da ambiguidade: uma heurística que sinaliza fragmentos de uma palavra só numa lista de elenco como prováveis nomes quebrados, mais um script que busca o elenco correto na API do TMDB só para as linhas sinalizadas como suspeitas — evitando ter que rebuscar 770 mil filmes inteiros.
 
 ## Construindo o banco (SQLite, via DB Browser)
 
@@ -26,7 +26,7 @@ Um `FOREIGN KEY constraint failed` que o `INSERT OR IGNORE` não resolveu — po
 Um erro de `database is locked` em tempo de execução — causado pelo DB Browser mantendo o arquivo aberto com um lock pendente enquanto a API tentava ler ao mesmo tempo.
 
 - [Normalização do Banco de Dados e criação das Tabelas Entidade-Relacionamento](https://github.com/Benfluc/Projects/blob/main/project10/codes/01_schema_e_normalizacao.sql)
-- [Consultas de exemplo](https://github.com/Benfluc/Projects/blob/main/project10/codes/02_consultas_exemplo.sql)
+- [Consultas de exemplo](https://github.com/Benfluc/Projects/blob/main/cinestack/codes/02_consultas_exemplo.sql)
 
 
 ## O backend: Express, e um desvio por dependência nativa
