@@ -1,6 +1,6 @@
 # Metodologia e Resultados
 
-Para acessar o código e datasets usadados nesse projeto clique [aqui](https://github.com/Benfluc/Projects/tree/main/project9/codes)
+Para acessar o código e datasets usadados nesse projeto clique [aqui](https://github.com/Benfluc/Projects/tree/main/credit_risk_analysis/codes)
 
 ## 1. O Problema e o Objetivo
 Neste projeto, desenvolveu-se um sistema de pontuação de crédito (Credit Scoring) utilizando o dataset 'Give Me Some Credit'. O objetivo central foi prever a probabilidade de um cliente enfrentar 
@@ -27,7 +27,7 @@ Para cada proponente de crédito, o modelo estimou uma probabilidade de inadimpl
 
 O diferencial da arquitetura Neuro-Fuzzy reside na sua natureza interpretável. Ao contrário de modelos "caixa-preta" como LSTM (Long Short-Term Memory) ou XGBoost, a lógica fuzzy permite auditar os critérios de classificação por meio da análise das funções de pertinência e regras de inferência. Para quantificar a influência dos atributos no veredito da rede, aplicou-se o coeficiente de correlação de Spearman, que identificou os principais drivers de risco do modelo:
 
-![](https://github.com/Benfluc/Projects/blob/main/project9/imgs/mapa_corr.png)
+![](https://github.com/Benfluc/Projects/blob/main/credit_risk_analysis/imgs/mapa_corr.png)
 
  - Idade: Apresentou uma correlação inversa significativa, indicando que a maturidade demográfica está associada a perfis de menor risco.
 
@@ -51,7 +51,7 @@ Abaixo, detalhamos o risco médio segregado por categorias, demonstrando a consi
 
 Além do fator demográfico, a rede demonstrou uma sensibilidade refinada ao comportamento financeiro ativo, como observado na relação entre a Utilização de Linhas de Crédito Desprotegidas e a Probabilidade Fuzzy.
 
-![](https://github.com/Benfluc/Projects/blob/main/project9/imgs/graph_credit_risk.png)
+![](https://github.com/Benfluc/Projects/blob/main/credit_risk_analysis/imgs/graph_credit_risk.png)
 
 O gráfico de dispersão revela que o modelo não aplica uma penalização binária, mas sim uma gradação de risco. É perceptível uma densidade acentuada de perfis com risco elevado à medida que a utilização atinge o limiar de 1.0 (100% do limite utilizado). Esse comportamento evidencia a capacidade do sistema Neuro-Fuzzy de mapear zonas de incerteza: enquanto usuários com baixa utilização apresentam uma dispersão maior de risco (influenciada por outras variáveis como atrasos históricos), o esgotamento das linhas de crédito atua como um gatilho de alerta imediato para a rede, elevando a base da probabilidade de inadimplência.
 
