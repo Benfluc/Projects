@@ -27,7 +27,7 @@ Develop a complete Business Intelligence platform for Formula 1 historical data.
 - [Portuguese Version](README_PT.md) - Portuguese
 
 ## Source Code
-- All scripts and notebooks are available in the [code folder](https://github.com/Benfluc/Projects/tree/main/project11/codes)  
+- All scripts and notebooks are available in the [code folder](https://github.com/Benfluc/Projects/tree/main/f1_analytics/codes)  
 
 ## Images and Visualizations
-- Charts, graphs, and other project images can be found in the [images folder](https://github.com/Benfluc/Projects/tree/main/project11/imgs)
+- Charts, graphs, and other project images can be found in the [images folder](https://github.com/Benfluc/Projects/tree/main/f1_analytics/imgs)
