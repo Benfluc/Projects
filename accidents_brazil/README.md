@@ -15,8 +15,8 @@ The results emphasize the importance of data-driven approaches for policymaking 
 - [Portuguese Version](README_PT.md) – overview and explanation in Portuguese
 
 ## Full Article
-- [English Version](https://github.com/Benfluc/Projects/blob/main/project3/text_en.md)  
-- [Portuguese Version](https://github.com/Benfluc/Projects/blob/main/project3/text_pt.md)  
+- [English Version](https://github.com/Benfluc/Projects/blob/main/accidents_brazil/text_en.md)  
+- [Portuguese Version](https://github.com/Benfluc/Projects/blob/main/accidents_brazil/text_pt.md)  
 
 ## Source Code
-- The notebook of this project is available in the [code folder](https://github.com/Benfluc/Projects/tree/main/project3/code)
+- The notebook of this project is available in the [code folder](https://github.com/Benfluc/Projects/tree/main/accidents_brazil/code)
