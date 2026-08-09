@@ -14,11 +14,11 @@ Este projeto aplica técnicas de previsão de séries temporais para estimar os 
 - [Versão em Inglês](README.md) – versão completa em inglês
 
 ## Artigo Completo
-- [Versão em Inglês](https://github.com/Benfluc/Projects/blob/main/project1/Article%20EN.pdf)
-- [Versão em Português](https://github.com/Benfluc/Projects/blob/main/project1/Artigo_PT.pdf)
+- [Versão em Inglês](https://github.com/Benfluc/Projects/blob/main/coffee_export/Article%20EN.pdf)
+- [Versão em Português](https://github.com/Benfluc/Projects/blob/main/coffee_export/Artigo_PT.pdf)
   
 ## Código Fonte
-- Todos os scripts e notebooks estão disponíveis na pasta [codes](https://github.com/Benfluc/Projects/tree/main/project1/codes)  
+- Todos os scripts e notebooks estão disponíveis na pasta [codes](https://github.com/Benfluc/Projects/tree/main/coffee_export/codes)  
 
 ## Imagens e Visualizações
-- Gráficos, figuras e imagens do projeto podem ser encontrados na pasta [imgs](https://github.com/Benfluc/Projects/tree/main/project1/imgs)
+- Gráficos, figuras e imagens do projeto podem ser encontrados na pasta [imgs](https://github.com/Benfluc/Projects/tree/main/coffee_export/imgs)
