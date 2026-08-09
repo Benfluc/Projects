@@ -4,7 +4,7 @@ This analysis is based on interactive dashboards developed in Power BI using sim
 The objective is to support an economic, financial, and strategic assessment of the business, highlighting relevant patterns, strengths, and opportunities for improvement.
 
 ## 1. Operational Data
-![Dados Operacionais](https://github.com/Benfluc/Projects/blob/main/project8/imgs/ifood_dados_operacionais.png)
+![Dados Operacionais](https://github.com/Benfluc/Projects/blob/main/food_delivery_dashboard/imgs/ifood_dados_operacionais.png)
 CBased on the dashboards presented, a robust economic and financial performance is observed, supported by a high operational scale and broad geographic coverage.
 
 Total sales volume reaches approximately R$ 29 million, driven by 317 thousand orders, 3,500 establishments, and service coverage across 2,527 cities, which demonstrates strong market penetration and the consolidation of the platform as a relevant intermediary in the delivery sector. The average ticket value of R$ 91.46, combined with an average purchase frequency of 3.27 orders per customer, indicates consistent consumption recurrence, although there remains room for strategies to increase the average order value through bundles, cross-selling, and dynamic pricing policies.
@@ -12,13 +12,13 @@ Total sales volume reaches approximately R$ 29 million, driven by 317 thousand o
 From a financial perspective, the concentration of orders on specific days of the week (Friday to Sunday) and in categories such as burgers, Brazilian cuisine, and pizza suggests predictable seasonality. This pattern enables the optimization of logistics costs, promotional campaigns, and resource allocation during periods of higher marginal return.
 
 ## 2. Customer Profile
-![Perfil dos Clientes](https://github.com/Benfluc/Projects/blob/main/project8/imgs/ifood_perfil_dos_clientes.png)
+![Perfil dos Clientes](https://github.com/Benfluc/Projects/blob/main/food_delivery_dashboard/imgs/ifood_perfil_dos_clientes.png)
 From a strategic perspective, the regional analysis reveals a significant concentration of orders, customers, and establishments in states such as Minas Gerais, São Paulo, and Rio Grande do Sul, indicating mature and highly competitive markets. At the same time, the national presence and the relative homogeneity of the average rating across states (around 3.4 to 3.5) point to a standardized service experience, albeit without a clear differentiation in excellence.
 
 This scenario creates opportunities for regional quality and loyalty strategies, particularly in states with higher operational density, where small improvements in customer satisfaction can generate significant impacts on retention and revenue. The age-based segmentation shows that most demand is concentrated between 26 and 65 years old, a profile associated with higher purchasing power and consumption stability, reinforcing the potential for loyalty programs, subscriptions, and recurring benefits targeted at this audience.
 
 ## 3. Experience and Satisfaction
-![Experiência e Satisfação](https://github.com/Benfluc/Projects/blob/main/project8/imgs/ifood_experiencia_e_satisfacao.png)
+![Experiência e Satisfação](https://github.com/Benfluc/Projects/blob/main/food_delivery_dashboard/imgs/ifood_experiencia_e_satisfacao.png)
 From a financial-operational and customer experience perspective, the evaluation indicators warrant strategic attention. Although the total volume of reviews is high (222 thousand), with 70% of orders being rated, the average rating of 3.47 and the significant proportion of negative reviews (37.21%) reveal relevant weaknesses in the customer journey.
 
 The coexistence of highly positive comments (“best in the region,” “wonderful”) with recurring criticisms (“arrived spoiled,” “didn’t like it,” “worst place”) indicates substantial heterogeneity in the quality of partner establishments. Strategically, this suggests the need for stricter curation policies, continuous performance monitoring, and quality-based incentive mechanisms, since the platform’s average reputation directly impacts conversion rates, repeat purchases, and customer acquisition costs.
