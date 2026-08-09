@@ -4,7 +4,7 @@
 
 This text provides an explanation of the code, how it was built, and how it was executed. If you prefer, you can go straight to the section with the obtained results and management suggestions [here](results.md).
 
-The dataset used in this study was obtained from Kaggle.com and can be viewed in the [code folder](https://github.com/Benfluc/Projects/tree/main/project5/codes).
+The dataset used in this study was obtained from Kaggle.com and can be viewed in the [code folder](https://github.com/Benfluc/Projects/tree/main/sales_behavior/codes).
 The data contains 9,994 sales records from a store, including details such as purchase date, shipping date, product type, category, profit, and more.
 The main goal of this study was to perform an Exploratory Data Analysis (EDA) to identify areas for improvement and potential opportunities for store managers.
 
@@ -196,7 +196,7 @@ for i in range(corr.shape[0]):
         plt.text(j, i, f"{corr.iloc[i,j]:.2f}", ha="center", va="center")
 save_plot(fig, "correlation_matrix.png")
 ```
-All generated tables and charts can be viewed [here](https://github.com/Benfluc/Projects/tree/main/project5/imgs).
+All generated tables and charts can be viewed [here](https://github.com/Benfluc/Projects/tree/main/sales_behavior/imgs).
 
 Based on all this information, it was possible to extract valuable insights that highlight areas for improvement and growth opportunities for the company, such as increasing profitability and optimizing the logistics of order transportation, thereby reducing losses caused by delays.
 You can check all of this in detail here: [results and recommendations](results.md).
