@@ -113,7 +113,7 @@ plt.show()
 With the co-occurrence matrix built, we visualize it through a plot:
 
 **Output:**
-![Correlation Graph of Sales](https://github.com/Benfluc/Projects/blob/main/project4/imgs/grafico_correla%C3%A7%C3%A3o_compras.png)
+![Correlation Graph of Sales](https://github.com/Benfluc/Projects/blob/main/purchase_recommend/imgs/grafico_correla%C3%A7%C3%A3o_compras.png)
 
 Finally, we identify the target product, in this example, the '20in Monitor'. The code traverses the corresponding row (excluding the product itself) and returns the three largest values found there.
 The advantage of this system is that it is easily adjustable, serving as an effective tool for purchase recommendations based on the purchase history of other customers.
