@@ -1,6 +1,6 @@
 # Development of the F1 Analytics Platform
 
-![Kimi Antonelli Standings](https://raw.githubusercontent.com/Benfluc/Projects/refs/heads/main/Project11/imgs/kimi_relat.png)
+![Kimi Antonelli Standings](https://raw.githubusercontent.com/Benfluc/Projects/refs/heads/main/f1_analytics/imgs/kimi_relat.png)
 
 ## Overview
 
@@ -199,7 +199,7 @@ using Power BI.
 The database was modeled using a 
 Star Schema approach.
 
-![Star Schema](https://github.com/Benfluc/Projects/blob/main/Project11/imgs/star_schema.png)
+![Star Schema](https://github.com/Benfluc/Projects/blob/main/f1_analytics/imgs/star_schema.png)
 
 The model separates:
 
@@ -248,8 +248,8 @@ indicators for Formula 1 analysis.
 
 ## Conclusion
 
-![Mercedes Analytics](https://github.com/Benfluc/Projects/blob/main/Project11/imgs/mercedes_relat.png)
-![McLaren Analytics](https://github.com/Benfluc/Projects/blob/main/Project11/imgs/mclaren_relat.png)
+![Mercedes Analytics](https://github.com/Benfluc/Projects/blob/main/f1_analytics/imgs/mercedes_relat.png)
+![McLaren Analytics](https://github.com/Benfluc/Projects/blob/main/f1_analytics/imgs/mclaren_relat.png)
 
 The F1 Analytics Platform demonstrates 
 how modern data engineering and business 
