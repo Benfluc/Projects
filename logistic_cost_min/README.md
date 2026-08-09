@@ -18,9 +18,9 @@ This process highlights the practical application of operations research techniq
 - [Portuguese Version](README_PT.md) – overview and explanation in Portuguese
 
 ## Full Article
-- [English Version](https://github.com/Benfluc/Projects/blob/main/project2/text_en.md)
-- [Portuguese Version](https://github.com/Benfluc/Projects/blob/main/project2/text_pt.md)
+- [English Version](https://github.com/Benfluc/Projects/blob/main/logistic_cost_min/text_en.md)
+- [Portuguese Version](https://github.com/Benfluc/Projects/blob/main/logistic_cost_min/text_pt.md)
 
 ## Source Code
-- The notebook of this project are available in the [code folder](https://github.com/Benfluc/Projects/tree/main/project2/code)  
+- The notebook of this project are available in the [code folder](https://github.com/Benfluc/Projects/tree/main/logistic_cost_min/code)  
 
