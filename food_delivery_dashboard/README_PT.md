@@ -23,7 +23,7 @@ O dashboard foi concebido para apoiar a tomada de decisão orientada por dados, 
 - [Portugues version](results_pt.md)
 
 ## Códigos
-- Todos os scripts e notebooks estão disponíveis na [pasta de códigos](https://github.com/Benfluc/Projects/tree/main/project8/codes)  
+- Todos os scripts e notebooks estão disponíveis na [pasta de códigos](https://github.com/Benfluc/Projects/tree/main/food_delivery_dashboard/codes)  
 
 ## Imagens e Gráficos
-- Gráficos, visualizações e demais imagens do projeto podem ser encontrados na [Pasta Imagens](https://github.com/Benfluc/Projects/tree/main/project8/imgs)
+- Gráficos, visualizações e demais imagens do projeto podem ser encontrados na [Pasta Imagens](https://github.com/Benfluc/Projects/tree/main/food_delivery_dashboard/imgs)
