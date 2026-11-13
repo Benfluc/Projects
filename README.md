@@ -21,7 +21,8 @@ Portfolio of applied data science, machine learning, and business intelligence p
 | 7 | [BI for a Debt Collection Call Center](./bi_callcenter) | BI platform integrating multi-channel operational data with an AI-based agent scoring system. | Power BI |
 | 8 | [Food Delivery Sales Dashboard (Simulated iFood Case)](./food_delivery_dashboard) | Interactive dashboard analyzing simulated delivery sales and customer behavior. | Power BI |
 | 9 | [Credit Risk Analysis with Fuzzy Logic](./credit_risk_analysis) | Neuro-fuzzy (ANFIS) model for credit risk classification. | Python, ANFIS |
-| 10 | [CineStack - End-to-End Movie Search Application](./cinestack). | An end-to-end full stack movie search application | SQLite, Python, React |
-| 11 | [F1 Analytics Platform](./f1_analytics). | An interactive Power BI dashboard built from a custom PostgreSQL | PostgreSQL, Docker, PowerBI |
+| 10 | [CineStack - End-to-End Movie Search Application](./cinestack) | An end-to-end full stack movie search application | SQLite, Python, React |
+| 11 | [F1 Analytics Platform](./f1_analytics) | An interactive Power BI dashboard built from a custom PostgreSQL | PostgreSQL, Docker, PowerBI |
+| 12 | [Brazilian Rural Credit Overview](./ruralcredit) | An web application with an overview of rural credit distribution and trends across Brazil | ferramentas |
 
 Each project folder contains its own `README.md` (English) and `README_PT.md` (Portuguese) with full context, results, source code, and images.
