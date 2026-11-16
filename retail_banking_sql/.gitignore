@@ -1,0 +1,7 @@
+# Generated data (recreate with data_generation/generate_data.py)
+data/raw/*.csv
+
+__pycache__/
+*.pyc
+.venv/
+.DS_Store

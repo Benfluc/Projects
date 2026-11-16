@@ -1,0 +1,17 @@
+services:
+  db:
+    image: postgres:16
+    container_name: retail_bank_db
+    environment:
+      POSTGRES_USER: bank
+      POSTGRES_PASSWORD: bank
+      POSTGRES_DB: retail_bank
+    ports:
+      - "${DB_PORT:-5434}:5432"   # host port for BI tools; override with DB_PORT if taken
+    working_dir: /project    # so the relative paths in sql/run_all.sql resolve
+    volumes:
+      - .:/project:ro
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

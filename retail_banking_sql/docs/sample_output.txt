@@ -1,0 +1,200 @@
+[1/7] Schema and raw load
+[2/7] Staging and star schema
+[3/7] Data quality
+[4/7] Customer analytics
+[5/7] Credit portfolio
+[6/7] AML detection
+[7/7] Headline results
+
+########## DATA QUALITY ##########
+--- Raw rows vs loaded rows
+    dataset    | raw_rows | loaded_rows | rejected_rows 
+---------------+----------+-------------+---------------
+ transactions  |  1421323 |     1419196 |          2127
+ customers     |    20153 |       20000 |           153
+ loan_payments |   109589 |      109553 |            36
+(3 rows)
+
+--- Rejected transactions by reason
+    reject_reason    | rows_rejected | pct_of_rejects 
+---------------------+---------------+----------------
+ duplicate_row       |          1419 |           66.7
+ unknown_account     |           354 |           16.6
+ non_positive_amount |           236 |           11.1
+ missing_timestamp   |           118 |            5.5
+(4 rows)
+
+--- Automated tests (expected: 0 failing rows everywhere)
+                     test_name                      | failing_rows 
+----------------------------------------------------+--------------
+ load reconciles: raw = loaded + rejected           |            0
+ transaction ids are unique                         |            0
+ transactions fall inside the account lifetime      |            0
+ transaction customer matches the account owner     |            0
+ internal counterparties are known accounts         |            0
+ every customer has a current account               |            0
+ closed customers have no open accounts             |            0
+ holdings close on or after they open               |            0
+ instalment numbers are contiguous per loan         |            0
+ instalment = principal + interest                  |            0
+ paid instalments are paid in full                  |            0
+ paid-off loans repaid exactly the principal        |            0
+ monthly activity view matches the transaction fact |            0
+(13 rows)
+
+
+########## CUSTOMERS ##########
+--- Retention of 2024 joiners (% still transacting N months after joining)
+ cohort_month | cohort_size | month_1 | month_3 | month_6 | month_9 | month_12 
+--------------+-------------+---------+---------+---------+---------+----------
+ 2024-01-01   |         218 |    89.0 |    89.4 |    85.3 |    83.5 |     83.5
+ 2024-02-01   |         216 |    85.2 |    87.0 |    81.0 |    82.9 |     77.8
+ 2024-03-01   |         225 |    84.4 |    81.3 |    84.0 |    78.7 |     75.6
+ 2024-04-01   |         216 |    88.0 |    85.2 |    81.0 |    81.0 |     79.2
+ 2024-05-01   |         220 |    84.5 |    84.5 |    84.1 |    80.5 |     72.7
+ 2024-06-01   |         209 |    83.3 |    85.6 |    81.3 |    77.5 |     74.6
+ 2024-07-01   |         203 |    84.2 |    81.3 |    79.3 |    80.8 |     74.9
+ 2024-08-01   |         238 |    84.5 |    87.0 |    79.8 |    81.9 |     76.5
+ 2024-09-01   |         202 |    85.1 |    82.2 |    83.7 |    80.2 |     79.7
+ 2024-10-01   |         214 |    87.9 |    84.6 |    83.2 |    77.6 |     75.7
+ 2024-11-01   |         195 |    87.2 |    87.2 |    81.5 |    79.0 |     75.4
+ 2024-12-01   |         222 |    82.4 |    83.8 |    79.7 |    71.6 |     73.0
+(12 rows)
+
+--- RFM segments
+      rfm_segment       | customers | pct_of_customers | avg_recency_days | avg_txns_12m | avg_spend_12m | pct_of_total_spend 
+------------------------+-----------+------------------+------------------+--------------+---------------+--------------------
+ Champions              |      3573 |             20.1 |                2 |         83.1 |         11289 |               49.3
+ Loyal                  |      4493 |             25.3 |                5 |         46.2 |          4529 |               24.8
+ At risk (high value)   |      1803 |             10.1 |               23 |         46.3 |          5987 |               13.2
+ Hibernating            |      5309 |             29.9 |               50 |         16.4 |          1167 |                7.6
+ Recent, low engagement |      1485 |              8.4 |                2 |         16.8 |          1614 |                2.9
+ Needs attention        |      1114 |              6.3 |                7 |         16.4 |          1640 |                2.2
+(6 rows)
+
+--- Churn early-warning rule, back-tested as of 30 June 2025
+   customer_group    | customers | left_within_6m | closure_rate_pct | lift_vs_all_customers | pct_of_all_leavers 
+---------------------+-----------+----------------+------------------+-----------------------+--------------------
+ Flagged by the rule |      1126 |            165 |             14.7 |                   4.9 |               34.2
+ Not flagged         |     14940 |            317 |              2.1 |                   0.7 |               65.8
+(2 rows)
+
+--- Customers on the watchlist today, by segment
+ segment  | customers | avg_days_silent 
+----------+-----------+-----------------
+ mass     |       602 |              51
+ affluent |       156 |              55
+ sme      |        56 |              78
+ private  |        34 |              52
+(4 rows)
+
+--- Strongest product affinities
+ if_customer_holds | then_also_holds | customers_with_both | confidence_pct | lift 
+-------------------+-----------------+---------------------+----------------+------
+ Investment Fund   | Pension Plan    |                 808 |           52.4 | 5.58
+ Pension Plan      | Investment Fund |                 808 |           47.5 | 5.58
+ Mortgage          | Home Insurance  |                 495 |           61.0 | 4.84
+ Home Insurance    | Mortgage        |                 495 |           21.7 | 4.84
+ Business Loan     | Credit Card     |                 213 |           47.3 | 1.25
+ Credit Card       | Business Loan   |                 213 |            3.1 | 1.25
+(6 rows)
+
+--- Next best product: campaign sizes
+ recommended_product | because_customer_holds | customers_to_contact | confidence_pct | lift 
+---------------------+------------------------+----------------------+----------------+------
+ Mortgage            | Home Insurance         |                 1400 |           21.7 | 4.84
+ Investment Fund     | Pension Plan           |                  893 |           47.5 | 5.58
+ Pension Plan        | Investment Fund        |                  659 |           52.4 | 5.58
+ Home Insurance      | Mortgage               |                  292 |           61.0 | 4.84
+(4 rows)
+
+
+########## CREDIT PORTFOLIO ##########
+--- Vintage analysis: cumulative % of loans reaching 90+ days past due
+ vintage | loans | by_month_6 | by_month_12 | by_month_18 | by_month_24 
+---------+-------+------------+-------------+-------------+-------------
+    2021 |   533 |       0.75 |        3.00 |        5.63 |        7.32
+    2022 |   813 |       0.98 |        3.94 |        6.64 |        8.61
+    2023 |  1074 |       1.21 |        4.66 |        8.19 |       11.73
+    2024 |  1578 |       0.76 |        2.79 |        5.60 |            
+    2025 |  1094 |       1.01 |             |             |            
+(5 rows)
+
+--- Roll rates: where loans in each bucket are one month later (%)
+ from_bucket | loan_months | to_current | to_1_30 | to_31_60 | to_61_90 | to_90_plus | to_charged_off | to_paid_off 
+-------------+-------------+------------+---------+----------+----------+------------+----------------+-------------
+ Current     |      103168 |       96.1 |     2.8 |      0.0 |        0 |          0 |              0 |         1.1
+ 1-30 days   |        3494 |       54.7 |    19.5 |     24.8 |        0 |          0 |              0 |         0.9
+ 31-60 days  |        1143 |       21.8 |     1.0 |     27.4 |     48.4 |        1.0 |              0 |         0.5
+ 61-90 days  |         743 |       12.9 |     0.3 |      0.3 |     28.8 |       57.3 |              0 |         0.4
+ 90+ days    |        1791 |        2.6 |     0.1 |        0 |      0.1 |       81.7 |           15.1 |         0.3
+(5 rows)
+
+--- Loan book, last 6 month-ends
+ snapshot_date | live_loans | outstanding_eur_m | npl_ratio_pct | change_pp | npl_ratio_3m_avg 
+---------------+------------+-------------------+---------------+-----------+------------------
+ 2025-12-31    |       4423 |            249.71 |          0.75 |     -0.15 |             0.95
+ 2025-11-30    |       4494 |            252.99 |          0.90 |     -0.29 |             1.08
+ 2025-10-31    |       4562 |            256.04 |          1.19 |      0.04 |             0.99
+ 2025-09-30    |       4617 |            258.56 |          1.15 |      0.53 |             0.82
+ 2025-08-31    |       4395 |            247.29 |          0.63 |     -0.07 |             0.69
+ 2025-07-31    |       4169 |            234.58 |          0.70 |     -0.06 |             0.69
+(6 rows)
+
+--- Loan book today by product and risk rating
+    product    | risk_rating | live_loans | outstanding_eur_m | in_arrears_pct | npl_ratio_pct 
+---------------+-------------+------------+-------------------+----------------+---------------
+ Business Loan | A           |        144 |              3.95 |           0.93 |          0.93
+ Business Loan | B           |        172 |              5.29 |           5.54 |          0.19
+ Business Loan | C           |        135 |              4.14 |           3.81 |          0.96
+ Business Loan | D           |         61 |              1.78 |          11.32 |          1.88
+ Business Loan | E           |         35 |              1.12 |          28.36 |          1.28
+ Business Loan | all         |        547 |             16.28 |           6.19 |          0.82
+ Mortgage      | A           |        233 |             55.49 |           0.00 |          0.00
+ Mortgage      | B           |        232 |             53.87 |           2.19 |          0.00
+ Mortgage      | C           |        253 |             61.53 |           3.72 |          0.40
+ Mortgage      | D           |        104 |             25.64 |           7.09 |          4.02
+ Mortgage      | E           |         60 |             15.34 |           5.77 |          0.00
+ Mortgage      | all         |        882 |            211.86 |           2.91 |          0.60
+ Personal Loan | A           |        775 |              5.67 |           1.28 |          0.80
+ Personal Loan | B           |        941 |              6.43 |           2.87 |          0.89
+ Personal Loan | C           |        721 |              5.07 |           7.20 |          2.93
+ Personal Loan | D           |        356 |              2.83 |          10.96 |          5.60
+ Personal Loan | E           |        201 |              1.57 |          22.72 |          3.49
+ Personal Loan | all         |       2994 |             21.57 |           5.98 |          2.15
+ ALL PRODUCTS  | all         |       4423 |            249.71 |           3.39 |          0.75
+(19 rows)
+
+
+########## AML DETECTION ##########
+--- Detection scorecard against investigator-confirmed cases
+   typology    | confirmed_cases | alerts | true_positives | false_positives | missed_cases | precision_pct | recall_pct 
+---------------+-----------------+--------+----------------+-----------------+--------------+---------------+------------
+ circular_flow |              94 |     80 |             80 |               0 |           14 |         100.0 |       85.1
+ structuring   |              84 |     79 |             71 |               8 |           13 |          89.9 |       84.5
+ velocity      |              50 |     42 |             42 |               0 |            8 |         100.0 |       84.0
+(3 rows)
+
+--- Tuning the structuring rule: lower bound of the deposit band
+ deposits_from_eur | alerts | false_alarms | precision_pct | recall_pct 
+-------------------+--------+--------------+---------------+------------
+              9000 |     30 |            0 |         100.0 |       35.7
+              8000 |     79 |            8 |          89.9 |       84.5
+              7000 |     92 |           12 |          87.0 |       95.2
+              6500 |    113 |           29 |          74.3 |      100.0
+              6000 |    212 |          128 |          39.6 |      100.0
+              5000 |    734 |          650 |          11.4 |      100.0
+(6 rows)
+
+--- Largest circular flows
+ origin_account |                    path                     | hops | amount_sent | amount_returned |    duration     
+----------------+---------------------------------------------+------+-------------+-----------------+-----------------
+         119241 | {119241,115629,101332,119241}               |    3 |    42821.56 |        41318.73 | 17:57:08
+         103630 | {103630,120742,121052,112530,103630}        |    4 |    42301.30 |        39237.67 | 1 day 10:10:27
+         115310 | {115310,102295,107580,104956,118623,115310} |    5 |    42263.82 |        39647.67 | 2 days 09:50:17
+         105476 | {105476,115237,119343,102466,107141,105476} |    5 |    41466.98 |        38343.73 | 3 days 00:28:30
+         115751 | {115751,100159,113277,115751}               |    3 |    38809.02 |        37148.28 | 1 day 17:56:27
+(5 rows)
+
+
+Done. Performance experiments: psql -d retail_bank -f sql/07_performance/01_query_tuning.sql
