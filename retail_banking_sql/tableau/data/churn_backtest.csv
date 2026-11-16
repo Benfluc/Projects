@@ -1,0 +1,3 @@
+customer_group,customers,left_within_6m,closure_rate_pct,lift_vs_all_customers,pct_of_all_leavers
+Flagged by the rule,1126,165,14.7,4.9,34.2
+Not flagged,14940,317,2.1,0.7,65.8

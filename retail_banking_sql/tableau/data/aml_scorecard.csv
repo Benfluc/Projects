@@ -1,0 +1,4 @@
+typology,confirmed_cases,alerts,true_positives,false_positives,missed_cases,precision_pct,recall_pct
+Circular Flow,94,80,80,0,14,100.0,85.1
+Structuring,84,79,71,8,13,89.9,84.5
+Velocity,50,42,42,0,8,100.0,84.0

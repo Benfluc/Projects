@@ -1,0 +1,7 @@
+deposits_from_eur,alerts,false_alarms,true_alerts,precision_pct,recall_pct,rule_status
+9000,30,0,30,100.0,35.7,Alternative
+8000,79,8,71,89.9,84.5,Current rule
+7000,92,12,80,87.0,95.2,Alternative
+6500,113,29,84,74.3,100.0,Alternative
+6000,212,128,84,39.6,100.0,Alternative
+5000,734,650,84,11.4,100.0,Alternative

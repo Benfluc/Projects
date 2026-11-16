@@ -78,6 +78,17 @@ conecte em `localhost:5434` (banco `retail_bank`, usuário e senha `bank`) e car
 
 A saída esperada do passo 3 está em [docs/sample_output.txt](docs/sample_output.txt).
 
+## Painel no Tableau
+
+O Tableau Public lê arquivos, e não bancos de dados. Por isso, o
+[sql/09_export_for_tableau.sql](sql/09_export_for_tableau.sql) exporta os resultados em 14 arquivos CSV para
+[tableau/data](tableau/data). Os arquivos estão no repositório, de modo que o painel pode ser refeito sem executar o
+banco. Para gerá-los novamente:
+
+```bash
+docker compose exec db psql -U bank -d retail_bank -f sql/09_export_for_tableau.sql
+```
+
 ## Limitações
 
 - **Os dados são sintéticos.** Os padrões foram plantados pelo gerador; os achados mostram que o SQL os recupera

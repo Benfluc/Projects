@@ -1,0 +1,27 @@
+from_bucket,from_sort,to_bucket,to_sort,loan_months,pct
+Current,1,Current,1,99150,96.1
+Current,1,1-30 days,2,2865,2.8
+Current,1,31-60 days,3,8,0.0
+Current,1,Paid off,7,1145,1.1
+1-30 days,2,Current,1,1912,54.7
+1-30 days,2,1-30 days,2,681,19.5
+1-30 days,2,31-60 days,3,868,24.8
+1-30 days,2,Paid off,7,33,0.9
+31-60 days,3,Current,1,249,21.8
+31-60 days,3,1-30 days,2,11,1.0
+31-60 days,3,31-60 days,3,313,27.4
+31-60 days,3,61-90 days,4,553,48.4
+31-60 days,3,90+ days,5,11,1.0
+31-60 days,3,Paid off,7,6,0.5
+61-90 days,4,Current,1,96,12.9
+61-90 days,4,1-30 days,2,2,0.3
+61-90 days,4,31-60 days,3,2,0.3
+61-90 days,4,61-90 days,4,214,28.8
+61-90 days,4,90+ days,5,426,57.3
+61-90 days,4,Paid off,7,3,0.4
+90+ days,5,Current,1,47,2.6
+90+ days,5,1-30 days,2,2,0.1
+90+ days,5,61-90 days,4,2,0.1
+90+ days,5,90+ days,5,1464,81.7
+90+ days,5,Charged off,6,271,15.1
+90+ days,5,Paid off,7,5,0.3

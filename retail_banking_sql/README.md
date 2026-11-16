@@ -136,6 +136,16 @@ user and password `bank`) and load the views of the `analytics` schema.
 
 The expected output of step 3 is in [docs/sample_output.txt](docs/sample_output.txt).
 
+## Tableau dashboard
+
+Tableau Public reads files, not databases, so [sql/09_export_for_tableau.sql](sql/09_export_for_tableau.sql) exports
+the results as 14 tidy CSV files into [tableau/data](tableau/data). The files are committed, so the dashboard can be
+rebuilt without running the database. To regenerate them:
+
+```bash
+docker compose exec db psql -U bank -d retail_bank -f sql/09_export_for_tableau.sql
+```
+
 ## Repository structure
 
 ```
@@ -151,7 +161,9 @@ retail_banking_sql/
 │   ├── 05_credit_portfolio/           snapshots, vintages, roll rates, portfolio
 │   ├── 06_aml_detection/              structuring, velocity, circular flows, scorecard, tuning
 │   ├── 07_performance/                EXPLAIN ANALYZE experiments, refresh
-│   └── 08_headline_results.sql        prints the main result of each module
+│   ├── 08_headline_results.sql        prints the main result of each module
+│   └── 09_export_for_tableau.sql      exports the results as CSV for Tableau Public
+├── tableau/data/                      exported results (committed)
 ├── docs/findings.md                   results and interpretation
 ├── docs/sample_output.txt             full output of a run
 └── docker-compose.yml

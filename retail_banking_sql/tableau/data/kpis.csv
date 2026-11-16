@@ -1,0 +1,7 @@
+sort_no,metric,value,unit
+1,Customers,20000,count
+2,Transactions analysed,1419196,count
+3,Live loan book (EUR m),249.71,EUR m
+4,Non-performing loans (% of book),0.75,%
+5,Customers on churn watchlist,848,count
+6,AML alerts raised,201,count

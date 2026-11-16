@@ -1,0 +1,51 @@
+if_customer_holds,then_also_holds,customers_with_both,support_pct,confidence_pct,lift
+Business Loan,Credit Card,213,1.17,47.3,1.25
+Business Loan,Home Insurance,43,0.24,9.6,0.76
+Business Loan,Investment Fund,15,0.08,3.3,0.39
+Business Loan,Savings Account,180,0.99,40.0,0.99
+Credit Card,Business Loan,213,1.17,3.1,1.25
+Credit Card,Home Insurance,930,5.13,13.5,1.08
+Credit Card,Investment Fund,713,3.93,10.4,1.22
+Credit Card,Mortgage,287,1.58,4.2,0.93
+Credit Card,Pension Plan,797,4.39,11.6,1.24
+Credit Card,Personal Loan,924,5.09,13.4,0.97
+Credit Card,Savings Account,2967,16.36,43.2,1.06
+Home Insurance,Business Loan,43,0.24,1.9,0.76
+Home Insurance,Credit Card,930,5.13,40.8,1.08
+Home Insurance,Investment Fund,223,1.23,9.8,1.15
+Home Insurance,Mortgage,495,2.73,21.7,4.84
+Home Insurance,Pension Plan,233,1.28,10.2,1.09
+Home Insurance,Personal Loan,299,1.65,13.1,0.95
+Home Insurance,Savings Account,967,5.33,42.4,1.04
+Investment Fund,Business Loan,15,0.08,1.0,0.39
+Investment Fund,Credit Card,713,3.93,46.2,1.22
+Investment Fund,Home Insurance,223,1.23,14.5,1.15
+Investment Fund,Mortgage,74,0.41,4.8,1.07
+Investment Fund,Pension Plan,808,4.46,52.4,5.58
+Investment Fund,Personal Loan,203,1.12,13.2,0.95
+Investment Fund,Savings Account,697,3.84,45.2,1.11
+Mortgage,Credit Card,287,1.58,35.3,0.93
+Mortgage,Home Insurance,495,2.73,61.0,4.84
+Mortgage,Investment Fund,74,0.41,9.1,1.07
+Mortgage,Pension Plan,80,0.44,9.9,1.05
+Mortgage,Personal Loan,111,0.61,13.7,0.99
+Mortgage,Savings Account,332,1.83,40.9,1.01
+Pension Plan,Credit Card,797,4.39,46.9,1.24
+Pension Plan,Home Insurance,233,1.28,13.7,1.09
+Pension Plan,Investment Fund,808,4.46,47.5,5.58
+Pension Plan,Mortgage,80,0.44,4.7,1.05
+Pension Plan,Personal Loan,248,1.37,14.6,1.06
+Pension Plan,Savings Account,753,4.15,44.3,1.09
+Personal Loan,Credit Card,924,5.09,36.9,0.97
+Personal Loan,Home Insurance,299,1.65,11.9,0.95
+Personal Loan,Investment Fund,203,1.12,8.1,0.95
+Personal Loan,Mortgage,111,0.61,4.4,0.99
+Personal Loan,Pension Plan,248,1.37,9.9,1.06
+Personal Loan,Savings Account,1031,5.68,41.2,1.01
+Savings Account,Business Loan,180,0.99,2.4,0.99
+Savings Account,Credit Card,2967,16.36,40.3,1.06
+Savings Account,Home Insurance,967,5.33,13.1,1.04
+Savings Account,Investment Fund,697,3.84,9.5,1.11
+Savings Account,Mortgage,332,1.83,4.5,1.01
+Savings Account,Pension Plan,753,4.15,10.2,1.09
+Savings Account,Personal Loan,1031,5.68,14.0,1.01

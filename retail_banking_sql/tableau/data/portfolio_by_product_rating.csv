@@ -1,0 +1,65 @@
+product,risk_rating,bucket,live_loans,outstanding_eur
+Business Loan,A,90+ days,3,36711.44
+Business Loan,A,Current,141,3908714.24
+Business Loan,B,1-30 days,3,95150.82
+Business Loan,B,31-60 days,4,110244.25
+Business Loan,B,61-90 days,3,78130.54
+Business Loan,B,90+ days,3,9865.43
+Business Loan,B,Current,159,4998809.28
+Business Loan,C,1-30 days,6,102518.88
+Business Loan,C,31-60 days,1,14996.32
+Business Loan,C,61-90 days,1,559.31
+Business Loan,C,90+ days,3,39564.16
+Business Loan,C,Current,124,3984725.95
+Business Loan,D,1-30 days,6,119070.34
+Business Loan,D,31-60 days,2,24039.49
+Business Loan,D,61-90 days,1,24446.41
+Business Loan,D,90+ days,2,33350.30
+Business Loan,D,Current,50,1574480.62
+Business Loan,E,1-30 days,2,44213.68
+Business Loan,E,31-60 days,2,36484.97
+Business Loan,E,61-90 days,4,223782.40
+Business Loan,E,90+ days,1,14358.93
+Business Loan,E,Current,26,805260.56
+Mortgage,A,Current,233,55485275.64
+Mortgage,B,1-30 days,1,385352.12
+Mortgage,B,31-60 days,2,796360.05
+Mortgage,B,Current,229,52691488.14
+Mortgage,C,1-30 days,5,1036214.48
+Mortgage,C,31-60 days,3,825564.17
+Mortgage,C,61-90 days,1,184415.91
+Mortgage,C,90+ days,1,244901.33
+Mortgage,C,Current,243,59234159.29
+Mortgage,D,1-30 days,1,285004.46
+Mortgage,D,31-60 days,1,310185.04
+Mortgage,D,61-90 days,1,191505.50
+Mortgage,D,90+ days,4,1030996.68
+Mortgage,D,Current,97,23823575.14
+Mortgage,E,1-30 days,2,409285.02
+Mortgage,E,31-60 days,2,475163.07
+Mortgage,E,Current,56,14451865.45
+Personal Loan,A,1-30 days,4,20835.43
+Personal Loan,A,31-60 days,1,1019.00
+Personal Loan,A,61-90 days,1,5146.31
+Personal Loan,A,90+ days,9,45331.83
+Personal Loan,A,Current,760,5594620.09
+Personal Loan,B,1-30 days,9,89163.55
+Personal Loan,B,31-60 days,5,15811.60
+Personal Loan,B,61-90 days,2,22013.14
+Personal Loan,B,90+ days,14,57539.74
+Personal Loan,B,Current,911,6249654.76
+Personal Loan,C,1-30 days,17,130060.43
+Personal Loan,C,31-60 days,5,59505.04
+Personal Loan,C,61-90 days,4,26796.83
+Personal Loan,C,90+ days,29,148790.49
+Personal Loan,C,Current,666,4707625.03
+Personal Loan,D,1-30 days,11,65558.26
+Personal Loan,D,31-60 days,9,62448.73
+Personal Loan,D,61-90 days,3,23569.90
+Personal Loan,D,90+ days,27,158261.61
+Personal Loan,D,Current,306,2516769.28
+Personal Loan,E,1-30 days,20,193989.33
+Personal Loan,E,31-60 days,11,84484.53
+Personal Loan,E,61-90 days,5,24118.24
+Personal Loan,E,90+ days,14,54933.83
+Personal Loan,E,Current,151,1215921.23

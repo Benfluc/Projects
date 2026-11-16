@@ -1,0 +1,5 @@
+recommended_product,because_customer_holds,customers_to_contact,confidence_pct,lift
+Mortgage,Home Insurance,1400,21.7,4.84
+Investment Fund,Pension Plan,893,47.5,5.58
+Pension Plan,Investment Fund,659,52.4,5.58
+Home Insurance,Mortgage,292,61.0,4.84
