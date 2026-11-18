@@ -80,7 +80,7 @@ A saída esperada do passo 3 está em [docs/sample_output.txt](docs/sample_outpu
 
 ## Painel no Tableau
 
-Você pode acessar a visualização no Tableau pelo [link](https://public.tableau.com:9443/views/RetailBankingAnalyticsinSQL/Painel1?:language=pt-BR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+Você pode acessar a visualização no Tableau pelo [link](https://public.tableau.com/views/RetailBankingAnalyticsinSQL/AMLdetection)
 
 O Tableau Public lê arquivos, e não bancos de dados. Por isso, o
 [sql/09_export_for_tableau.sql](sql/09_export_for_tableau.sql) exporta os resultados em 14 arquivos CSV para
