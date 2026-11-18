@@ -138,6 +138,8 @@ The expected output of step 3 is in [docs/sample_output.txt](docs/sample_output.
 
 ## Tableau dashboard
 
+You can access the Tableau visualization through the [link](https://public.tableau.com:9443/views/RetailBankingAnalyticsinSQL/Painel1?:language=pt-BR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link).
+
 Tableau Public reads files, not databases, so [sql/09_export_for_tableau.sql](sql/09_export_for_tableau.sql) exports
 the results as 14 tidy CSV files into [tableau/data](tableau/data). The files are committed, so the dashboard can be
 rebuilt without running the database. To regenerate them:
